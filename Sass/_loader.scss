@@ -1,0 +1,29 @@
+@import "./config";
+.loaderContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+@include flexcenter;
+opacity: 1;
+z-index: 2000;
+overflow: hidden;
+pointer-events: none;
+animation: fadeIn 0.5s linear forwards;
+animation-delay: 3s;
+@keyframes fadeIn{
+  from{
+    opacity: 0.5;
+    transform: scale(1.2);
+  }to{
+    transform: scale(1);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+img{
+  transform: scale(0.5);
+}
+}

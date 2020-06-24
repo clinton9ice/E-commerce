@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel='icon' href='../favicon.ico' type='image/x-icon'/ >
+    <title>Sommycasual</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Css/main.css">
+</head>
+<body>
+    <body>
+         <!------------Navbar--------------->
+    <nav id="navbar">
+        <div class="nav-container rows">
+ <div class="brand"><span class="color">SC</span> Fashionwears</div>
+
+<div class="navbar-content">
+        <input class="search-control " type="search" placeholder="looking for?">
+    <select class="choose">
+    <option class="active" value="All Categories">All Categories</option>
+    <option value="Men's Cloths">Men's Cloths</option>
+    <option value="Women's Cloths">Women's Cloths</option>
+    <option value="Shoes">Shoes</option>
+    <option value="Phones">Phones</option>
+    <option  value="Computers">Computers</option>
+    <option value="Kitchen Gadgets">Kitchen Gadgets</option>
+    <option value="Cars">Cars</option>
+    
+    </select>
+        <button class="search-btn" type="submit" title="search">Search</button>
+        </div>
+
+<div class="side-nav">
+        <ul class="navbar-collection">
+        <li>
+        <a class="fa fa-shopping-basket navbar-item" href="../HTML/cart.php" title="cart"></a></li>
+            <li><div class="navbar-item">Menu</div>
+                    <div class="menu-list">
+             <ul>  
+                 <a href="blog" target="_blank"><li>Newslette</li></a>
+                 <a href="categories.html"><li>Category</li></a>
+                 <a href="./HTML/product.php"><li>Products</li></a>
+                 <a href="showcase"><li>shop</li></a>
+                 <a href="services"><li>Services</li></a>
+                 <a href="faq"><li>FAQS</li></a>
+                        </ul></div>
+            </li>
+            <li><div class="navbar-item acc">Account <i class="fa fa-chevron-circle-down"></i>
+            <div class="acc_dropdown" id="accountdropdown">
+                <ul>
+                    <li><i class="fa fa-user login-user-ico"></i><a href="./HTML/login.php">Login</a></li>
+                    
+                    <hr><div class="or">or</div>
+                    
+                    <li><a href="./Php/register/register.php">Signup</a></li>
+                </ul>
+                </div></div>
+            </li>
+            
+            <li><a class="fa fa-heart-o navbar-item" href="../HTML/wishlist.php" title="Wishlist" id="wishlist"></a></li>
+         </ul>
+        </div>
+        
+         
+         <!--------------Mobile Nav---------------------->
+    <div class="mobile-nav">
+        <ul>
+             <li> <div class="btn toggle-btn" onclick="toggleSidebar()">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                     </div>
+                </li>
+             <li><span class="fa fa-shopping-cart"></span></li>
+        </ul>
+        </div>
+
+        
+        </div>    </nav>     <div id="mobile-menu">
+             <span class="exit_btn" onclick="toggleSidebar()">x</span>
+                <div class="form-inline search-form">
+             <input class="form-input" placeholder="Search"> <button type="submit" class="form-submit fa fa-search"></button>
+             </div>
+                     <ul>
+                         <a href="#"><li class="active">Home</li></a>
+                         <a href="#"><li>Category</li></a>
+                         <a href="#"><li>Show Room</li></a>
+                         <a href="./HTML/product.php"><li>Products</li></a>
+                         <a href="#"><li>Shops</li></a>
+                         <a href="#"><li>Blog</li></a>
+                         <a href="#"><li>About Us</li></a>
+                         <a href="#"><li>My Wishlist</li></a>
+                         <a href="#"><li>Site Map</li></a>
+                         <li><a href="#">Cart</a>
+                         <i class="fa fa-shopping-cart ico"></i></li>
+                         <li><a href="./HTML/login.php">Login</a><i class="fa fa-user ico"></i></li>
+                     </ul>
+  </div>
+        
+    
+    
+    <section>
+<div class="container rows">
+    <div class="d-flex justify-content-center h-100">
+    <div class="user">
+    <div class="d-flex justify-contetnt-center">
+    <div class="brand_logo_container">
+    <img src="../Icon park/user.png" class="brand_logo" alt="Sc_Fashion_logo"/>
+        </div>
+        </div>
+        <div class="d-flex justify-content-center form_container">
+            <form method="post" action="valid.php">
+                <div class="input-group md-3">
+                <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                </div>
+                <input type="text" name="username" id="username" value="Clintonufere@gmail.com" class="input_user" required>
+                </div>
+                
+                <div class="input-group md-3">
+                <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                </div>
+                <input type="password" name="password" id="password" autocomplete="off" class="input_pass" required>
+                </div>
+                <div class="form_group">
+                <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="rememberme" class="custom-control-input" id="customControInline">
+                    <label class="custom-control-label" for="customControInline">
+                    Remember Me
+                    </label>
+                    </div>
+                </div>
+           
+        <div class="d-flex justify-content-center md-3 login_container">
+        <input type="submit" name="button" id="login" class="btn login_btn" value="Login">
+                </div>   </form></div>
+        <div class=" md-4 ">
+        <div class="justify-content-center d-flex links">
+            Don't have an Account? <a href="../Php/register/register.php" class="link">Sign Up</a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="link">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>        
+        
+</section>
+    
+    
+    
+    
+    
+    
+        <!------------------Footer------------------------>
+    <section class="footer">
+    <div class="container text-box">
+        <div class="row">
+            <div class="col-md-3">
+            <h1>CONTACT INFO</h1>
+                <h4>ADDRESS</h4>
+                <p>Restpoint plaza, 18, Ojo-Igbede Road Sunny Bus-stop, Opp Diamond Bank, Ojo, Lagos, Nigeria</p>
+                <h4>Phone:</h4>
+                  <p>08137371397</p>
+                   <h4>Email:</h4>
+                  <p>sales@Restpoint.com.ng</p>
+                 <h4>WORKING DAYS/HOURS:</h4>
+                  <p>Mon-Sat/9:00 AM - 5:00 PM</p>
+                 <p>
+                <div class="footer-social">
+                                              <i class="fa fa-facebook"></i>
+                             <i class="fa fa-instagram"></i>
+                                              <i class="fa fa-twitter"></i> 
+                             <i class="fa fa-link"></i></div>
+        
+            </div>   
+            
+              
+            
+            
+            
+            <div class="col-md-3">
+                                    <h1>SUBSCRIBE NEWSLETTER</h1>
+                                        <p>Get All The Latest Brands, Sales and Offers. Sign Up Today For Our Newsletter</p>
+                </div>  <form method="POST">
+            <div class="newslett_mail">
+            <input type="email" placeholder="Email Us On" class="newslett" required><button type="submit" class="submit-btn"> Subscribe</button>
+</div> 
+            </form>
+             
+            <div class="col-md-7"><div class="account">
+                                    <h1>Account</h1>
+                 <a href="#">About Us</a><br>
+                 <a href="#">Contact Us</a><br>
+                 <a href="#">My Account</a><br>
+                 <a href="#">Order History</a><br>
+                <a href="#">Login</a><br></div>
+            
+                 
+                 </div>
+    
+            <div class="col-md-8"><div class="customers">
+                                    <h1>Main Features</h1>
+                 <a href="#">Customer Care</a><br>
+                 <a href="#">Online Support</a><br>
+                 <a href="#">Services With sound Business Principle</a><br>
+                 <a href="#">Honesty And Good Quality Products</a><br>
+                <a href="#">Customers Satisfactions</a><br>
+                 </div> 
+            </div>
+                </div> 
+                       
+        </div>
+    
+        <hr>
+        
+     
+           <div class="copyright">             
+               Copyright: &copy; 2019 | All Right Reserved.Site Owned by Clinton <i class="fa fa-heart-o"></i> </div>
+    
+    
+    
+    
+    
+    
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+     <script src="../Js/mobile.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script>
+        $(function(){
+           $('#login').click(function(e){
+              var valid = this.form.checkValidity();
+               if(valid){
+                   var username = document.getElementById('username').val();
+                   var password = document.getElementById('password').val();
+               }
+               
+               e.preventDefault();
+               
+                   $.ajax({
+                       type: 'POST',
+                       url: 'valid.php',
+                       data: (username,password),
+                       success: function(data){
+                           alert('Done')
+                       },
+                       error: function(data){
+                           alert('error encountered');
+                       }
+                   })
+               
+           })
+        })
+        
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>

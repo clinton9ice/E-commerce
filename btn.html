@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sommycasual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+<style>
+    body{
+        background:url(img/%5C/brandsmens1_5___B3McvnXgTq-___.jpg) no-repeat;
+        background-size: cover;
+    
+    }
+.mail-menu{
+    position: fixed;
+   bottom: 1em;
+    left: 1em;
+}
+.mail-menu .floating-btn{
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+     background-color: hsl(4,98%,60%);
+    box-shadow: 0 2px 5px 0 hsla(0,0%,0%,.37);
+    color: rgb(245,245,245);
+    text-align: center;
+    line-height: 3.7;
+    outline: 0;     
+    }
+.mail-menu .floating-btn:active{
+  box-shadow: 0 4px 8px 0 hsla(0,0,0,.4);
+}
+.mail-menu .floating-btn i{
+    font-size: 1.3em;
+    transition: transform .2s;
+}
+    .mail-menu.active .floating-btn i{
+        transform: rotate(90deg);
+    }
+.mail-menu::after{
+        display: block;
+        content: '';
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+        background-color:rgb(21,20,55);
+        transition: all .3s ease;
+        
+    }
+.mail-menu.active::after{
+    transform: scale3d(5.5,5.5,1);
+    transition-timing-function: cubic-bezier(.68,1.55,.265,1);
+}
+    .mail-menu .items-wrapper{
+        padding: 0;
+        margin: 0;
+    }
+    .mail-menu .menu-item{
+        position: absolute;
+        top: .2em;
+        right: .2em;
+        left: 0;
+        z-index: -1;
+        display: block;
+        text-decoration: none;
+        font-size: 1em;
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2;
+        background-color: hsla(0,0,0,.1);
+        transition: transform 2s ease background .2s ease;
+        overflow: auto;
+    }
+    .mail-menu .menu-item:hover{
+        background-color: hsla(0,0,0,.3);
+    }
+    .mail-menu.active .menu-item{
+        transition-timing-function: cubic-bezier(3,3,1);
+    }
+    .mail-menu.active .menu-item:nth-child(1){
+        transform: translate3d(-0.5em, -8em,0);
+          color: lightblue;
+    }
+    .mail-menu.active .menu-item:nth-child(2){
+        transform: translate3d(3em, -7em,0);
+         
+    } 
+    .mail-menu.active .menu-item:nth-child(3){
+        transform: translate3d(5em, -5em,0);
+         color: rgb(283,28,28);
+    }
+    .mail-menu.active .menu-item:nth-child(4){
+        transform: translate3d(6.5em, -2em,0);
+          color: rgb(64,196,255);
+    }
+    .mail-menu.active .menu-item:nth-child(5){
+        transform: translate3d(7em, 2em,0);
+         color: rgb(20,200,20);
+    }
+    </style>
+<div class="mail-menu active" id="mail-menu">
+        
+        <a class="floating-btn" onclick="document.getElementById('mail-menu').classList.toggle('active');">
+            <i class="fa fa-plus"></i>
+    </a>
+   
+        <menu class="items-wrapper">
+    
+        <a href="" class="fa fa-facebook menu-item"></a>
+            <a href="" class="fa fa-google-plus menu-item"></a>
+        <a href="" class="fa fa-instagram menu-item"></a>
+        <a href="" class="fa fa-twitter menu-item"></a>
+        <a href="" class="fa fa-whatsapp menu-item"></a>
+         </menu>
+    </div>
+</html>

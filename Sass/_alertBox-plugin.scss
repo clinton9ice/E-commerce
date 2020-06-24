@@ -1,0 +1,79 @@
+.popBox{
+  position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ opacity: 0;
+ padding: 10px;
+ background-color: rgba(0, 0, 0, 0.5);
+ display: grid;
+ place-items: center;
+ align-items: center;
+ z-index: 1000;
+ transition: all 0.5s ease;
+ animation: popBox 0.5s ease forwards;
+ overflow-y: auto;
+ &::-webkit-scrollbar{
+  display: none;
+}
+@keyframes popBox{
+  from{
+height: 0;
+  }
+  to{
+      height: 100%;
+      opacity: 1;
+  }
+}
+.messageBox{
+  max-width: 700px;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+  opacity: 0;
+  font-size: 20px;
+  color: rgb(63, 60, 60);
+  font-weight: 200;
+  background-color: white;
+  transition: all 0.5s ease;
+  animation: topDrop 0.5s ease forwards;
+  animation-delay: 0.5s;
+  z-index: 1100;
+  @keyframes topDrop{
+    from{
+transform: translateY(400px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+h2{
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(228, 227, 227);
+  }
+  p{
+    margin: 20px auto;
+    line-height: 1.5;
+    font-weight: 300;
+    b{
+      font-size: 35px;
+  }
+}
+a{
+  float: right;
+  background-color: rgb(22, 255, 22);
+  width: 60px;
+  height: 40px;
+  line-height: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+  }
+ }
