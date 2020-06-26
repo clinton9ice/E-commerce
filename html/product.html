@@ -1,955 +1,907 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='icon' href='../favicon.ico' type='image/x-icon'/ >
-    <title>Sommycasual</title>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../Css/main.css">
- 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get All your products from our Category list or search for a particular product you so desire">
+<meta name="keywords" content="Javascript, HTML, CSS, JSON, REACT">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>LegitMall</title>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'/>
+<link rel="stylesheet" href="../Css/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
     <!------------Navbar--------------->
-    <nav>
-        <div class="nav-container">
- <div class="brand"><span class="color">SC</span> Fashionwears</div>
-
-<div class="navbar-content">
-    <div class="search-container">
-        <input class="search-input" type="search" placeholder="looking for?">
-    <select class="choose">
-    <option class="active" value="All Categories">All Categories</option>
-    <option value="Men's Cloths">Men's Cloths</option>
-    <option value="Women's Cloths">Women's Cloths</option>
-    <option value="Shoes">Shoes</option>
-    <option value="Phones">Phones</option>
-    <option  value="Computers">Computers</option>
-    <option value="Kitchen Gadgets">Kitchen Gadgets</option>
-    <option value="Cars">Cars</option>
-    
-        </select>
-        <button class="search-btn" type="submit" title="search">Search</button>
-    </div></div>
-
-<div class="side-nav">
-        <ul class="navbar-collection">
-        <li>
-        <a class="fa fa-shopping-basket navbar-item" href="../HTML/cart.php" title="cart"></a></li>
-            <li><div class="navbar-item">Menu</div>
-                    <div class="menu-list">
-             <ul>  
-                 <a href="blog" target="_blank"><li>Newslette</li></a>
-                 <a href="categories.html"><li>Category</li></a>
-                 <a href="./HTML/product.php"><li>Products</li></a>
-                 <a href="showcase"><li>shop</li></a>
-                 <a href="services"><li>Services</li></a>
-                 <a href="faq"><li>FAQS</li></a>
-                        </ul></div>
-            </li>
-            <li><div class="navbar-item acc">Account <i class="fa fa-chevron-circle-down"></i>
-            <div class="acc_dropdown" id="accountdropdown">
-                <ul>
-                    <li><i class="fa fa-user login-user-ico"></i><a href="./HTML/login.php">Login</a></li>
-                    
-                    <hr><div class="or">or</div>
-                    
-                    <li><a href="./Php/register/register.php">Signup</a></li>
-                </ul>
-                </div></div>
-            </li>
-            
-            <li><a class="fa fa-heart-o navbar-item" href="../HTML/wishlist.php" title="Wishlist" id="wishlist"></a></li>
-         </ul>
-        </div>
-        
-         
-         <!--------------Mobile Nav---------------------->
-    <div class="mobile-nav">
-        <ul>
-             <li> <div class="btn toggle-btn" onclick="toggleSidebar()">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-                     </div>
-                </li>
-             <li><span class="fa fa-shopping-cart"></span></li>
-        </ul>
-        </div>
-
-        
-        </div>    </nav>    
-    <div id="mobile-menu">
-             <span class="exit_btn" onclick="toggleSidebar()">x</span>
-                <div class="form-inline search-form">
-             <input class="form-input" placeholder="Search"> <button type="submit" class="form-submit fa fa-search"></button>
+<nav>
+<h1 class="site_logo">Legit-Mall</h1>
+<div class="list-container">
+<ul class="lists">
+    <li><a href="../Index.html">Home</a></li>
+<li class="menu"><a>Menu</a>
+<div class="dropDown"> 
+<a href="#" target="_blank">Newslette</a>
+<a href="#">Category</a>
+<a href="#">Products</a>
+<a href="#">shop</a>
+<a href="#">Services</a>
+<a href="#">FAQS</a>
 </div>
-<ul>
- <a href="#"><li class="active">Home</li></a>
- <a href="#"><li>Category</li></a>
- <a href="#"><li>Show Room</li></a>
- <a href="./HTML/product.php"><li>Products</li></a>
- <a href="#"><li>Shops</li></a>
- <a href="#"><li>Blog</li></a>
- <a href="#"><li>About Us</li></a>
- <a href="#"><li>My Wishlist</li></a>
- <a href="#"><li>Site Map</li></a>
- <li><a href="#">Cart</a>
- <i class="fa fa-shopping-cart ico"></i></li>
- <li><a href="./HTML/login.php">Login</a><i class="fa fa-user ico"></i></li>
+</li>
+<li><a><i class="fa fa-shopping-basket"></i><span class="text"> Cart</span></a></li>
+<li><a><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
+
+<li id="search"><a onclick="document.location.assign('./html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
+</li>
 </ul>
-  </div>
-    
-    <section>
-    <div class="container align-text-center">
-        <p class="title">Categories</p>
-    <div class="inline-contents icons">
-        <a href="phones.html" class="fa fa-bicycle" title="bicycles" id="cat-icons"></a>
-    <a class="fa fa-car" title="cars"></a>
-    <a class="fa fa-mobile" title="phones"></a>
-    <a href="phones.html" class="fa fa-desktop" title="computers"></a>
-    <a href="phones.html" class="fa fa-headphones" title="headphones"></a>
-        <i class="fa fa-speakers"></i>
-            </div>  
-    </div>
-    </section>
-    
-    <div class="product-page">
-    <!--------------------Bags-------------------------->
-       <section class="bags">
-           
-    <div class="container">
-        <h2 class="title">Bags</h2>
-    <div class=" inline-content">
-        <div class="ob-row-4">
-           
-        <img src=../img/bags/aidangusbling___B0c6XrggztH___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$40.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1vo9m7gKQZ___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-            <div class="rpoduct-ico  align-text-center">
-            <h5>$29.50</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1qg3b8gTH5___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$15.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1e_W48APhb___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-             <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$20.10</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B0stbFCACCd___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$50.70</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1yNDJkA0k9___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h6>$70.00</h6>
-            <h5>$60.20</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1VSUcVAdF1___.jpg>
-            <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-            <button class="btn btn-secondary" title="Wishlist">
-            <i class="fa fa-heart-o"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$85.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B2F_yluguwq___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$45.50</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-          <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B2KuyA9AAps___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$25.22</h5>
-        </div>
-        </div>
-        
-         <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B2C9LstAhUN___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$25.40</h5>
-        </div>
-        </div>
-        
-          <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B1C8_eHgd1g___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overla align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-               <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h4>Makeup kit</h4>
-            <h5>$55.22</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src=../img/bags/aidangusbling___B01hTuNgEs0___.jpg>
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
-         </div>
-             <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$32.32</h5>
-        </div>
-        </div>     
-        </div>
-        </div>
-    </section>
-
-  
-        <!-------------------shoes---------------->
-        
-     <section class="shoes">
-    <div class="container">
-        <h2 class="title">Shoes</h2>
-    <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src="../img/shoes/aventura.style_1___B1I8HfYiDNF___.jpg">
-                <button class=" btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                <button class="btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-                
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$35.20</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-          <img src="../img/shoes/aventura.style_1___B1I8UI4Cntw___.jpg">
-                <button class=" btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$28.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_1___B1qyE5cCIYp___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$45.30</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_1___B1WJSRtiY4o___.jpg">
-                <button class="btn btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-             <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$20.90</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_1___B2mdoeADI2B___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$55.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-       <img src="../img/shoes/aventura.style_1___B2J9Y4bCqbK___.jpg">
-                <button class=" btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$45.00</h5>
-        </div>
-        </div>
-        <div class="ob-row-4">
-            <div class="zoom">
-            <img src="../img/shoes/aventura.style_1___B3AN7hTCnNV___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$70.01</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_2___B1I8HfYiDNF___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$50.00</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom show">
-           <img src="../img/shoes/aventura.style_2___B1qyE5cCIYp___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$15.70</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_2___B1WJSRtiY4o___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-             <div class="product-ico align-text-center">
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$80.30</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-            <img src="../img/shoes/aventura.style_2___B2J9Y4bCqbK___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-                
-            <h5>$45.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/shoes/aventura.style_2___B3AN7hTCnNV___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-            <h5>$70.00</h5>
-        </div>
-        </div>     
-        </div>
-    </div>
-           <hr>
-    </section>
-        
-        <!-------float-btn------------->
-        
-         <div class="float">
-        <a href="#"><span class="fa fa-chevron-up"></span></a>
-    </div>
-        
-        <div class="container">
-    <div class="social-icon" id="social-icon">
-    <a href="https://web.facebook.com/Clinton.9ice" class="fa fa-facebook" target="_blank"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-linkedin"></a>
-    <a href="#" class="fa fa-pinterest"></a>
-        </div>
-    </div>
-        <!----------------------Guests------------------->
-        
-     <section class="guests">
-        <div class="container">
-         <div class="align-content-center">
-             <form method="get" href="index.php" class="wrap-up">
-             <div class="ob-row-3">
-        <img src="../Icon park/user.png"  class="user-id"/>
-             </div>
-             
-             <div class="container newslette-register">
-                 <input type="email" class="name" placeholder="Mail:">
-                 <input type="text" name="name" placeholder="Name:">
-                 <input type="submit" value="Join">
-            </div>
-                 
-            <div class="col-md-4 text-capture">
-                <caption>You can join us today if you have a wonder clothing idea and if you are willing to explore just to get fashioon ideas</caption></div></form></div>
-             
+<div class=" headerBars">
+<span class="menu"></span>
+</div>
+</div>
+</nav>
+    <header>
+        <div class="header">
+            <div class="text-ads" id="section-1-ads">
             
-             <marquee class="text-ads">Welcome To SommyCasuals FashionWears asperta, We are glad to bring up latest clothing designs both Traditional and English wears. And The Most Fun Part Of It Is!! You can Order Any of the cloths at a cheaper rate and as well get another design for free <strong>Though This May Not Continue Because We Are Still On Promo</strong> So Rush NOW And Place Your Order!!!!</marquee>
-          </div>
-            <hr>
-        </section>  
-     
+            <h2> Shop Now</h2> 
+            <p>Get All Your Clothing Designs From Our Online Store and Get The Most Exciting Discount<br>You Can As Well Subscribe To Our Newslette To Keep Updated With Our Latest Designs.
+            </p>
+            <div class="text-btn">
+            <a href="#" target="_blank" class="default-btn btns">Get started</a> 
+            <a href="./php/register/register.php" target="_blank" class="btns">SignUp</a>
+            </div>    
+            </div>
+            </div>
+    </header>
+<section>
+<div class="container align-text-center">
+<p class="title">Categories</p>
+<div class="inline-contents icons">
+<a href="phones.html" class="fa fa-bicycle" title="bicycles" id="cat-icons"></a>
+<a class="fa fa-car" title="cars"></a>
+<a class="fa fa-mobile" title="phones"></a>
+<a href="phones.html" class="fa fa-desktop" title="computers"></a>
+<a href="phones.html" class="fa fa-headphones" title="headphones"></a>
+<i class="fa fa-speakers"></i>
+</div>  
+</div>
+</section>
+    
+<div class="product-page">
+<!--------------------Bags-------------------------->
+<section class="bags">
+
+<div class="container">
+<h2 class="title">Bags</h2>
+<div class=" inline-content">
+<div class="ob-row-4">
+
+<img src=../img/bags/aidangusbling___B0c6XrggztH___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$40.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1vo9m7gKQZ___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="rpoduct-ico  align-text-center">
+<h5>$29.50</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1qg3b8gTH5___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$15.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1e_W48APhb___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$20.10</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B0stbFCACCd___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$50.70</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1yNDJkA0k9___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h6>$70.00</h6>
+<h5>$60.20</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1VSUcVAdF1___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist">
+<i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$85.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B2F_yluguwq___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$45.50</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B2KuyA9AAps___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$25.22</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B2C9LstAhUN___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$25.40</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B1C8_eHgd1g___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overla align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h4>Makeup kit</h4>
+<h5>$55.22</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src=../img/bags/aidangusbling___B01hTuNgEs0___.jpg>
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$32.32</h5>
+</div>
+</div>     
+</div>
+</div>
+</section>
+
+
+<!-------------------shoes---------------->
+
+<section class="shoes">
+<div class="container">
+<h2 class="title">Shoes</h2>
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B1I8HfYiDNF___.jpg">
+<button class=" btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$35.20</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B1I8UI4Cntw___.jpg">
+<button class=" btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$28.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B1qyE5cCIYp___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$45.30</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B1WJSRtiY4o___.jpg">
+<button class="btn btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$20.90</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B2mdoeADI2B___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$55.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B2J9Y4bCqbK___.jpg">
+<button class=" btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$45.00</h5>
+</div>
+</div>
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_1___B3AN7hTCnNV___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$70.01</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_2___B1I8HfYiDNF___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$50.00</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom show">
+<img src="../img/shoes/aventura.style_2___B1qyE5cCIYp___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$15.70</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_2___B1WJSRtiY4o___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$80.30</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_2___B2J9Y4bCqbK___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h5>$45.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/shoes/aventura.style_2___B3AN7hTCnNV___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+<h5>$70.00</h5>
+</div>
+</div>     
+</div>
+</div>
+<hr>
+</section>
+
+<!-------float-btn------------->
+
+<div class="float">
+<a href="#"><span class="fa fa-chevron-up"></span></a>
+</div>
+
+<div class="container">
+<div class="social-icon" id="social-icon">
+<a href="https://web.facebook.com/Clinton.9ice" class="fa fa-facebook" target="_blank"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-pinterest"></a>
+</div>
+</div>
+<!----------------------Guests------------------->
+
+<section class="guests">
+<div class="container">
+<div class="align-content-center">
+<form method="get" href="index.php" class="wrap-up">
+<div class="ob-row-3">
+<img src="../Icon park/user.png"  class="user-id"/>
+</div>
+
+<div class="container newslette-register">
+<input type="email" class="name" placeholder="Mail:">
+<input type="text" name="name" placeholder="Name:">
+<input type="submit" value="Join">
+</div>
+
+<div class="col-md-4 text-capture">
+<caption>You can join us today if you have a wonder clothing idea and if you are willing to explore just to get fashioon ideas</caption></div></form></div>
+
+
+<marquee class="text-ads">Welcome To SommyCasuals FashionWears asperta, We are glad to bring up latest clothing designs both Traditional and English wears. And The Most Fun Part Of It Is!! You can Order Any of the cloths at a cheaper rate and as well get another design for free <strong>Though This May Not Continue Because We Are Still On Promo</strong> So Rush NOW And Place Your Order!!!!</marquee>
+</div>
+<hr>
+</section>  
+
 <!----------------sneaker------------------------>
-        
-        <section class="sneaker">
-    <div class="container">
-        <h2 class="title">Sneakers</h2>
-    <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom">
-        <img src="../img/sneakers/aventura.style_2___B1wK-TniZ_j___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-                
-         </div>
-            <div class="product-ico align-text-center">
-       
-            <h3>Tomika</h3>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h6>$45.29</h6>
-            <h5>$30.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-          <img src="../img/sneakers/brandsmens1_10___B3L7nYGorlz___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-       
-            <h3>VLTN Sneaker</h3>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$35.20</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_10___B3M8s57gqv1___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-       
-            <h4>X-force</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$70.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_10___B3McvnXgTq-___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-             <div class="product-ico align-text-center">
-       
-            <h4>Monclsr U.K design</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h6>$45.29</h6>
-            <h5>$30.00</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_1___B3M8s57gqv1___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-              <div class="product-ico align-text-center">
-       
-            <h4>Kyle design </h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h6>$900.29</h6>
-            <h5>$500.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-       <img src="../img/sneakers/brandsmens1_10___B3Mx3ROAZ0T___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-       
-            <h4>Uk Versace</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$1000.00</h5>
-        </div>
-        </div>
-        <div class="ob-row-4">
-            <div class="zoom">
-            <img src="../img/sneakers/brandsmens1_1___B3McvnXgTq-___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-            <div class="product-ico align-text-center">
-       
-            <h4>Clumsy design</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$40.00</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_2___B3L7nYGorlz___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-               <div class="product-ico align-text-center">
-       
-            <h4>VLTN Roundcap</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$35.20</h5>
-        </div>
-        </div>
-        </div>
-        
-        <div class="inline-content">
-        <div class="ob-row-4">
-            <div class="zoom show">
-           <img src="../img/sneakers/brandsmens1_3___B3M8s57gqv1___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay  align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-                 <div class="product-ico align-text-center">
-       
-            <h4>White Vincil</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$100.05</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_4___B3L7nYGorlz___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-                <div class="product-ico align-text-center">
-       
-            <h4>VLTN Sneaker</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$35.20</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-            <img src="../img/sneakers/brandsmens1_7___B3McvnXgTq-___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-         </div>
-                 <div class="product-ico align-text-center">
-       
-            <h4>Moncler 2013 Sneaker</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$75.10</h5>
-        </div>
-        </div>
-        
-        <div class="ob-row-4">
-            <div class="zoom">
-             <img src="../img/sneakers/brandsmens1_8___B3L7nYGorlz___.jpg">
-                <button class="btn-primary cart-btn-primary">+ Cart</button>
-             <div class="overlay align-text-center">
-        <button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
-                 <button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
-                 <button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
-                   <div class="product-ico align-text-center">
-       
-            <h4>VLTN white cover</h4>
-                 <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <h5>$55.50</h5>
-        </div>
-         </div>
-        </div>     
-        </div>
-    </div>
-    </section> 
 
-        
-    </div>
+<section class="sneaker">
+<div class="container">
+<h2 class="title">Sneakers</h2>
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/aventura.style_2___B1wK-TniZ_j___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+
+</div>
+<div class="product-ico align-text-center">
+
+<h3>Tomika</h3>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h6>$45.29</h6>
+<h5>$30.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_10___B3L7nYGorlz___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h3>VLTN Sneaker</h3>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$35.20</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_10___B3M8s57gqv1___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>X-force</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$70.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_10___B3McvnXgTq-___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>Monclsr U.K design</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h6>$45.29</h6>
+<h5>$30.00</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_1___B3M8s57gqv1___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>Kyle design </h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h6>$900.29</h6>
+<h5>$500.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_10___B3Mx3ROAZ0T___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>Uk Versace</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$1000.00</h5>
+</div>
+</div>
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_1___B3McvnXgTq-___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>Clumsy design</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$40.00</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_2___B3L7nYGorlz___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>VLTN Roundcap</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$35.20</h5>
+</div>
+</div>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-4">
+<div class="zoom show">
+<img src="../img/sneakers/brandsmens1_3___B3M8s57gqv1___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay  align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>White Vincil</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$100.05</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_4___B3L7nYGorlz___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class=" btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>VLTN Sneaker</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$35.20</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_7___B3McvnXgTq-___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class="btn btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class="btn btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+</div>
+<div class="product-ico align-text-center">
+
+<h4>Moncler 2013 Sneaker</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$75.10</h5>
+</div>
+</div>
+
+<div class="ob-row-4">
+<div class="zoom">
+<img src="../img/sneakers/brandsmens1_8___B3L7nYGorlz___.jpg">
+<button class="btn-primary cart-btn-primary">+ Cart</button>
+<div class="overlay align-text-center">
+<button class="btn btn-secondary" title="Shop"><i class="fa fa-eye"></i></button> 
+<button class=" btn-secondary" title="Wishlist"><i class="fa fa-heart-o"></i></button>
+<button class=" btn-secondary off" title="Add"><i class="fa fa-shopping-cart"></i></button></div>
+<div class="product-ico align-text-center">
+
+<h4>VLTN white cover</h4>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<h5>$55.50</h5>
+</div>
+</div>
+</div>     
+</div>
+</div>
+</section> 
+
+
+</div>
   
-     <section class="footer">
-    <div class="container text-box">
-        <div class="inline-content">
-            <div class="ob-row-1">
-            <h1>CONTACT INFO</h1>
-                <h4>ADDRESS</h4>
-                <p>Restpoint plaza, 18, Ojo-Igbede Road Sunny Bus-stop,<p> Opp Diamond Bank, Ojo, Lagos, Nigeria</p>
-                <h4>Phone:</h4>
-                  <p>08137371397</p>
-                   <h4>Email:</h4>
-                  <p>sales@Restpoint.com.ng</p>
-                 <h4>WORKING DAYS/HOURS:</h4>
-                  <p>Mon-Sat/9:00 AM - 5:00 PM</p>
-                 <p>
-                     
-                <div class="footer-social">
-            <i class="fa fa-facebook"></i>
-             <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i> 
-             <i class="fa fa-link"></i></div>  
-            </div>
-              
-            
-            
-            
-            <div class="ob-row-1">
-            <h1>SUBSCRIBE NEWSLETTER</h1>
-            <p>Get All The Latest Brands, Sales and Offers. Sign Up Today For Our Newsletter</p>
-    
-        <form method="post">
-            <div class="footer-input-container">
-            <input type="email" placeholder="Email Us On" class="newslett" required><button type="submit" class="submit-btn newslett_mail"> Subscribe</button>
+<section class="footer">
+<div class="container text-box">
+<div class="inline-content">
+<div class="ob-row-1">
+<h1>CONTACT INFO</h1>
+<h4>ADDRESS</h4>
+<p>Restpoint plaza, 18, Ojo-Igbede Road Sunny Bus-stop,<p> Opp Diamond Bank, Ojo, Lagos, Nigeria</p>
+<h4>Phone:</h4>
+<p>08137371397</p>
+<h4>Email:</h4>
+<p>sales@Restpoint.com.ng</p>
+<h4>WORKING DAYS/HOURS:</h4>
+<p>Mon-Sat/9:00 AM - 5:00 PM</p>
+<p>
+
+<div class="footer-social">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-twitter"></i> 
+<i class="fa fa-link"></i></div>  
+</div>
+
+
+
+
+<div class="ob-row-1">
+<h1>SUBSCRIBE NEWSLETTER</h1>
+<p>Get All The Latest Brands, Sales and Offers. Sign Up Today For Our Newsletter</p>
+
+<form method="post">
+<div class="footer-input-container">
+<input type="email" placeholder="Email Us On" class="newslett" required><button type="submit" class="submit-btn newslett_mail"> Subscribe</button>
 </div> 
-            </form>
-            </div>
-            
-            <div class="inline-content">
-            <div class="ob-row-1 footer-links">
-            <h1>Account</h1>
-                 <a href="#">About Us</a><p>
-                 <a href="#">Contact Us</a><p>
-                 <a href="#">My Account</a><p>
-                 <a href="#">Order History</a><p>
-                <a href="#">Login</a><br></div>
-            
-                 
-               
-    
-        <div class="ob-row-1 footer-links">
-          <h1>Main Features</h1>
-                 <a href="#">Customer Care</a><p>
-                 <a href="#">Online Support</a><p>
-                 <a href="#">Services With sound Business Principle</a><p>
-                 <a href="#">Honesty And Good Quality Products</a><p>
-                <a href="#">Customers Satisfactions</a><br>
-                 </div> 
-                </div> 
-                       
-        </div>
-    
-        <hr>
-        
-     
-           <div class="copyright">             
-               Copyright: &copy; 2019 | All Right Reserved.Site Owned by Clinton <i class="fa fa-heart-o"></i> </div>
-        </div>
-    </section>
-     <script src="../Js/mobile.js"></script>
+</form>
+</div>
+
+<div class="inline-content">
+<div class="ob-row-1 footer-links">
+<h1>Account</h1>
+<a href="#">About Us</a><p>
+<a href="#">Contact Us</a><p>
+<a href="#">My Account</a><p>
+<a href="#">Order History</a><p>
+<a href="#">Login</a><br></div>
+
+
+
+
+<div class="ob-row-1 footer-links">
+<h1>Main Features</h1>
+<a href="#">Customer Care</a><p>
+<a href="#">Online Support</a><p>
+<a href="#">Services With sound Business Principle</a><p>
+<a href="#">Honesty And Good Quality Products</a><p>
+<a href="#">Customers Satisfactions</a><br>
+</div> 
+</div> 
+
+</div>
+
+<hr>
+
+
+<div class="copyright">             
+Copyright: &copy; 2019 | All Right Reserved.Site Owned by Clinton <i class="fa fa-heart-o"></i> </div>
+</div>
+</section>
+<script src="../Js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

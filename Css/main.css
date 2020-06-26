@@ -63,7 +63,7 @@ padding: 0 15px;
 }
 /*--------nav-menu-------*/
 nav{
-    position: absolute;
+    position: fixed;
     left: 0;
     color: #fff;
     height: 70px;
@@ -71,6 +71,7 @@ nav{
     width: 100%;
     z-index: 900;
     padding: 0 10px;
+    border-bottom: 1px solid gray;
     transition: 0.5s all ease;
 }
 nav h1, nav div, nav i{

@@ -14,15 +14,6 @@ This is a site where you have the opportunity to buy and  sell your own goods bu
  let products = document.querySelectorAll(".products")
 
 
-//  window.addEventListener("load", () =>{
-//    for(var i = 0; i < document.querySelector("body").children.length; i++){
-//     document.querySelector("body").style.display = "none"
-//    }
-// setTimeout(element =>{
-//   document.querySelector("body").style.display = "static"
-// }, 3000)
-//  })
-
  //social-plugin
  iconBtn.addEventListener("click", function(){
    socialContainer.classList.toggle("active");
@@ -54,6 +45,7 @@ sliderFunction()
     }
   sliderFunction()
  }, 6000);
+
  //Ads Slidder
  function sliderFunction(){
   for(var i = 0; i < slider.length; i++){
@@ -106,7 +98,7 @@ function popBox(e){
 //Navscroll Trigger
 window.onscroll = () =>{
   let scrollheight = window.scrollY || document.body.innerHeight|| document.documentElement.innerHeight;
-if(Math.round(scrollheight) >= 200){
+if(Math.round(scrollheight) >= 300){
 document.querySelector("nav").classList.add("active")
 }
 else{

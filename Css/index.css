@@ -153,7 +153,7 @@ nav h1, nav div, nav i {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   left: 0;
   color: #fff;
   height: 70px;
@@ -161,7 +161,6 @@ nav {
   width: 100%;
   z-index: 900;
   padding: 0 10px;
-  border-bottom: 1px solid gray;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   font-size: 22px;
@@ -406,6 +405,7 @@ nav .headerBars.active span:after {
 }
 
 nav.active {
+  position: fixed;
   background-color: white;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
@@ -857,6 +857,22 @@ section.ads .controls span.left {
 
 section.ads .controls span.right {
   right: 30%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /*---------floating-social-icon---------*/
