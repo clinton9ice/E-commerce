@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body id="index">
 <header>
@@ -39,10 +40,10 @@
 </div>
 </div>
 </nav>
-<div class="header">
+<div class="header" style="background-image: url('./img/ussama-azam-hlg-ltdCoI0-unsplash.jpg'); background-position: center;">
 <div class="text-ads" id="section-1-ads">
 
-<h2> Shop Now</h2> 
+<h2 id="Header_title"> Shop Now</h2> 
 <p>Get All Your Clothing Designs From Our Online Store and Get The Most Exciting Discount<br>You Can As Well Subscribe To Our Newslette To Keep Updated With Our Latest Designs.
 </p>
 <div class="text-btn">
@@ -518,28 +519,28 @@ This is assumed to be a featured Product from another site
 <!-----Ads---->
 <section class="ads">
     <div class="slide">
-        <div class="imgSlider active">
+        <div class="imgSlider active" id="first-carousel-data">
         <img src="https://images.unsplash.com/photo-1580894529660-d55c66eefee7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="baby cloths">
         <span>
-            <h2>Text Header</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in aspernatur similique recusandae, rem corporis! Tempora aliquid nam excepturi itaque laborum inventore veritatis molestias ipsam.
+            <h2 class="carousel-hd"></h2>
+            <p class="txt"></p>
         </span>
         </div>
 
-        <div class="imgSlider">
+        <div class="imgSlider" id="second-carousel-data">
             <img src="https://images.unsplash.com/photo-1564222256577-45e728f2c611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <span>
-            <h2>Text Header 2</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </span>
+            <span>
+                <h2 class="carousel-hd"></h2>
+                <p class="txt"></p>
+            </span>
         </div>
 
-        <div class="imgSlider">
+        <div class="imgSlider" id="third-carousel-data">
             <img src="https://images.unsplash.com/photo-1565548058654-6ba93b5e3135?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
-        <span>
-            <h2>Text Header 3</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </span>
+            <span>
+                <h2 class="carousel-hd"></h2>
+                <p class="txt"></p>
+            </span>
         </div>
 </div>
 <div class="controls">
@@ -874,69 +875,70 @@ This is assumed to be a featured Product from another site
 <!-----------fixed-icon------------->
 <div class="fixedIcon">
 <div class="icon">
-<div onclick="show(icon)" class="iconBtn">+</div>
+<div  class="iconBtn">+</div>
 </div>
 <div class="social-icon" id="social-icon">
-<a href="https://web.facebook.com/Clinton.9ice" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-instagram" target="_blank"></a>
 <a href="#" class="fa fa-linkedin" target="_blank"></a>
 <a href="#" class="fa fa-whatsapp" target="_blank"></a>
 </div>
 </div>
+
    <!------------Reviews-->
-   <section class=" reviewSection">
-     <h2 class="reviewHeader">Reviews</h2>
-      <div class="content">
-           <span class="reviews">
-               <div class="userId">
-                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Review Pics">
-               </div>
-               <div class="rating">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-o"></i>
-                   <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
-                       
-                   </p>
-               </div>
-           </span>
-           <span class="reviews">
-               <div class="userId">
-                   <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="REview Pics">
-               </div>
-               <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
-                    
-                </p>
-            </div>
-           </span>
-           <span class="reviews">
-               <div class="userId">
-                   <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Review Pics">
-               </div>
-               <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
-                    
-                </p>
-            </div>
-           </span>
-        </div>
-        <p>
-            <div class="btn" id="reviews" onclick="alert('not available')">More reviews</div>
-        </p> 
-   </section>   <!------------------Footer-------------------------->
+<section class=" reviewSection">
+<h2 class="reviewHeader">Reviews</h2>
+<div class="content">
+<span class="reviews">
+<div class="userId">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Review Pics">
+</div>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
+
+</p>
+</div>
+</span>
+<span class="reviews">
+<div class="userId">
+<img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="REview Pics">
+</div>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-o"></i>
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
+
+</p>
+</div>
+</span>
+<span class="reviews">
+<div class="userId">
+<img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Review Pics">
+</div>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
+
+</p>
+</div>
+</span>
+</div>
+<p>
+<div class="btn" id="reviews" onclick="alert('not available')">More reviews</div>
+</p> 
+</section>   <!------------------Footer-------------------------->
 <footer>
 <div class="footer">
 <address class="footer_row">

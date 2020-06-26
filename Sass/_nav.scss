@@ -3,7 +3,7 @@ nav h1, nav div, nav i{
   display: inline-block;
   }
 nav{
-  position: fixed;
+  position: absolute;
   left: 0;
   color: #fff;
   height: 70px;
@@ -11,18 +11,18 @@ nav{
   width: 100%;
   z-index: 900;
   padding: 0 10px;
-  border-bottom: 1px solid gray;
   transition: 0.5s all ease;
   font-size: 22px;
   .site_logo{
     letter-spacing: 4px;
     font-weight: 400;
     margin: 0 12px;
+    color: #fff;
+    text-decoration: none;
     @include xsmallScreen{
      font-size: 20px;
      letter-spacing: 3px;
     }
-    pointer-events: none;
     font-size: calc(22px * 100%);
     @include mediumScreen{
       margin: 0 12px 0 0px;
@@ -201,6 +201,7 @@ a{
 
 }
 &.active{
+  position: fixed;
   background-color: white;
   transition: 0.5s all ease;
   color: rgb(53, 38, 32);

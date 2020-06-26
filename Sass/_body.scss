@@ -9,7 +9,7 @@ body{
   font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
   background-color: white;
-  text-rendering: optimizeLegibility;
+text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,47 +18,169 @@ header{
     width: 100%;
     height: 700px;
     .header{
-      background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.788)), url("https://images.unsplash.com/photo-1519167130418-c3640bd21b7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat;
-      background-position: top;
-      background-attachment: fixed;
-      background-size: cover;
-      height: 100%;
-      width: 100%;
+background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.788));
+background-position: top;
+background-attachment: fixed;
+background-size: cover;
+height: 100%;
+width: 100%;
 @include flexcenter;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 15px;
-  
+position: relative;
+padding: 0 15px;
+  overflow: hidden;
   .text-ads{
     color: white;
     font-size: 22px;
     h2{
-      text-align: center;
       font-size: 40px;
   }
   .text-btn{
-    text-align: center;
     margin: 25px 0;
     .btns{
       text-align: center;
       text-decoration: none;
       border: 1px solid rgb(214, 211, 211);
       color: white;
-      padding: 8px;
+      padding: 5px;
       margin: 0 5px;
       transition: .3s all ease;
   &:hover{
-    background-color: rgb(250, 72, 2);
+    background-color: $primary-color;
     border: none;
 }
   }
   .default-btn{
-    background-color: orangered;
-    color: white;
+    background-color: $primary-color;
     border:  none;
 }
 }
   } 
   }
+  .controls{
+    display: none;
+    transition: display 0.5s linear;
+    .fa{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+    .left{
+      left: 20px;
+    }
+    .right{
+      right: 20px;
+    }
+  }
+  &:hover{
+    .controls{
+      display: block;
+    }
+  }
+}
+.carousels{
+  .slides{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  .text-ads{
+   z-index: 500;
+   opacity: 1;
+   margin-left: 12px;
+   @include mediumScreen{
+     h2{
+      font-size: 25px;
+     }
+     font-size: 18px;
+   }
+  }
+    .img_container{
+      position: absolute;
+      width: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &:nth-child(3){
+     .text-ads{
+    background-color: rgba(0, 0, 0, 0.288);
+     }
+    }
+    &:nth-child(4){
+      .img_container{
+        img{
+          animation: slow-fade 0.5s linear forwards;
+          animation-delay: 0.5;
+          opacity: 0;
+          @keyframes slow-fade {
+            from{
+              transform: scale(0.5);
+              opacity: 0.5;
+            }
+            to{
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .text-ads{
+        animation: bottom-top 0.5s ease forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        transform: translateY(500px);
+        @keyframes bottom-top{
+          to{
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &:nth-child(5){
+  animation: drop 0.5s ease forwards;
+  opacity: 0;
+  @keyframes drop {
+    from{
+transform: translateY(-400px) scale(1.2);
+opacity: 0.5;
+    }to{
+      transform: translateY(1) scale(1);
+      opacity: 1;
+    }
+  }
+      .text-ads{
+        opacity: 0;
+        animation: fade-in 0.5s linear forwards;
+        animation-delay: 1s;
+        animation-play-state: running
+        ;
+        @keyframes fade-in {
+          from{
+            transform: scale(1.5) rotate(120deg);
+            opacity: 0.5;
+          }to{
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &.active{
+      display: flex;
+    }
+  }
+ 
 }

@@ -2,6 +2,7 @@ $smallDisplay: 300px;
 $xsmallDisplay: 250px; 
 $mediumDisplay: 700px; 
 $largeDisplay: 1200px; 
+$primary-color: rgb(250, 72, 2);
 @mixin xsmallScreen {
   @media screen and (max-width: $smallDisplay){
     @content;
