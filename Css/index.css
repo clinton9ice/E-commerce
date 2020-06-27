@@ -81,35 +81,6 @@ header .header .text-ads .text-btn .default-btn {
   border: none;
 }
 
-header .controls {
-  display: none;
-  -webkit-transition: display 0.5s linear;
-  transition: display 0.5s linear;
-}
-
-header .controls .fa {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-  cursor: pointer;
-}
-
-header .controls .left {
-  left: 20px;
-}
-
-header .controls .right {
-  right: 20px;
-}
-
-header:hover .controls {
-  display: block;
-}
-
 .carousels .slides {
   position: absolute;
   top: 0;
@@ -156,15 +127,102 @@ header:hover .controls {
      object-fit: cover;
 }
 
+.carousels .slides:nth-child(1) {
+  opacity: 0;
+  -webkit-animation: fade-in 0.5s ease forwards;
+          animation: fade-in 0.5s ease forwards;
+}
+
+.carousels .slides:nth-child(1) .text-ads .carousel-header {
+  opacity: 0;
+  -webkit-animation: drop 0.5s ease forwards;
+          animation: drop 0.5s ease forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.carousels .slides:nth-child(1) .text-ads #content {
+  opacity: 0;
+  -webkit-animation: left-slide 0.5s ease forwards;
+          animation: left-slide 0.5s ease forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.carousels .slides:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: left-slide 0.5s ease forwards;
+          animation: left-slide 0.5s ease forwards;
+}
+
+.carousels .slides:nth-child(2) .text-ads .carousel-header {
+  opacity: 0;
+  -webkit-animation: fade-in 0.8s ease forwards;
+          animation: fade-in 0.8s ease forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.carousels .slides:nth-child(2) .text-ads #content {
+  opacity: 0;
+  -webkit-animation: slow-fade 1.5s ease forwards;
+          animation: slow-fade 1.5s ease forwards;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+
+.carousels .slides:nth-child(3) {
+  opacity: 0;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation: slow-fade 0.5s ease forwards;
+          animation: slow-fade 0.5s ease forwards;
+}
+
 .carousels .slides:nth-child(3) .text-ads {
+  opacity: 0;
   background-color: rgba(0, 0, 0, 0.288);
+  -webkit-animation: left-slide 1s ease forwards;
+          animation: left-slide 1s ease forwards;
+}
+
+@-webkit-keyframes left-slide {
+  from {
+    -webkit-transform: translateX(-800px);
+            transform: translateX(-800px);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-slide {
+  from {
+    -webkit-transform: translateX(-800px);
+            transform: translateX(-800px);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.carousels .slides:nth-child(3) .text-ads #content {
+  opacity: 0;
+  -webkit-animation: slow-fade 0.5s ease forwards;
+          animation: slow-fade 0.5s ease forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .carousels .slides:nth-child(4) .img_container img {
   -webkit-animation: slow-fade 0.5s linear forwards;
           animation: slow-fade 0.5s linear forwards;
-  -webkit-animation-delay: 0.5;
-          animation-delay: 0.5;
   opacity: 0;
 }
 
@@ -197,8 +255,8 @@ header:hover .controls {
 .carousels .slides:nth-child(4) .text-ads {
   -webkit-animation: bottom-top 0.5s ease forwards;
           animation: bottom-top 0.5s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
   opacity: 0;
   -webkit-transform: translateY(500px);
           transform: translateY(500px);
@@ -256,8 +314,8 @@ header:hover .controls {
   opacity: 0;
   -webkit-animation: fade-in 0.5s linear forwards;
           animation: fade-in 0.5s linear forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -320,8 +378,8 @@ header:hover .controls {
   pointer-events: none;
   -webkit-animation: fadeIn 0.5s linear forwards;
           animation: fadeIn 0.5s linear forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -624,6 +682,10 @@ nav.active {
   border-bottom: none;
   -webkit-box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
           box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
+}
+
+nav.active .site_logo {
+  color: #000;
 }
 
 nav.active .headerBars span, nav.active .headerBars span:before, nav.active .headerBars span:after {
