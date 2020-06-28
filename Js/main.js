@@ -23,15 +23,15 @@ third_data: {
 }
  }
 $(document).ready(function(){
-$(function(){
-  let loader_container, loaderChild, p;
-  loader_container = document.createElement("div")
-  loaderChild = document.createElement('img')
-  loader_container.setAttribute("class", "loaderContainer");
-  loaderChild.setAttribute("src", "https://i.ibb.co/TqWSxNd/Spinner-1s-200px.gif")
-  loader_container.appendChild(loaderChild)
-document.body.appendChild(loader_container)
-})
+// $(function(){
+//   let loader_container, loaderChild, p;
+//   loader_container = document.createElement("div")
+//   loaderChild = document.createElement('img')
+//   loader_container.setAttribute("class", "loaderContainer");
+//   loaderChild.setAttribute("src", "https://i.ibb.co/TqWSxNd/Spinner-1s-200px.gif")
+//   loader_container.appendChild(loaderChild)
+// document.body.appendChild(loader_container)
+// })
 //prompt Box
 function popBox(e){
   setTimeout(() => {
@@ -59,8 +59,13 @@ function popBox(e){
 
   //Hamburgger Menu
 $('.headerBars').click(function(){
-$(".lists").toggleClass("active")
+  $(".list-container").toggleClass("active")
 $(this).toggleClass("active")
+})
+$('#dropdown').click(function(event){
+  $('.dropDown').slideToggle(100)
+  $('.fa-caret-down').toggleClass("active")
+
 })
 
 //IconBtn
@@ -102,9 +107,6 @@ function sliderFunction(){
     }
     slider[index].classList.add("active")
  }
- $(".slide").hover(function(){
-   clearInterval(interval)
- })
 $("#next").on({
   click: function(){
    $(carousel)

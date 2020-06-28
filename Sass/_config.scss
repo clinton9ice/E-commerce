@@ -3,6 +3,9 @@ $xsmallDisplay: 250px;
 $mediumDisplay: 700px; 
 $largeDisplay: 1200px; 
 $primary-color: rgb(250, 72, 2);
+$default-color: #fff;
+$dark: #000;
+$hover-color: rgb(241, 241, 241);
 @mixin xsmallScreen {
   @media screen and (max-width: $smallDisplay){
     @content;

@@ -34,8 +34,8 @@ nav{
       ul{
         margin: 0;
         padding: 0;
+        position: relative;
         li{
-          position: relative;
           display: inline-block;
           list-style: none;
           margin: 0 20px;
@@ -51,51 +51,72 @@ nav{
           font-weight: 500;
           text-decoration: none;
           cursor: pointer;
-          &:hover{
-            color: rgb(255, 82, 1);
-        }
+          .fa-shopping-bag{
+            color: rgb(209, 204, 173);
+          }
       }
     &.menu{
       padding: 0;
+      .fa-caret-down{
+        padding-left: 4px;
+       font-weight: 500;
+       cursor: pointer;
+       &.active{
+        transform: rotate(-180deg);
+        transition: all 0.5s ease;
+      }
+       @include mediumScreen{
+         color: $default-color;
+         display: block;
+         float: right;
+         margin-top: 25px;
+         
+       }
+       }
       .dropDown{
         position: absolute;
+        left: 0;
+        width: 100%;
         display: none;
-        min-width: 200px;
-        background-color: rgb(255, 255, 255);
+        background-color: $default-color;
         border: 1px solid rgb(221, 218, 218);
         border-top: none;
         transition:0.3s all ease;
         animation: slide 0.5s ease forwards;
         padding: 0;
+        z-index: 10000;
+        ul{
+          position: static;
+          li{
+            padding: 0;
+            display: block;
+            margin: auto 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+        }
         a{
           margin:  0;
           padding: 0 15px;
-          height: 50px;
-          line-height: 50px;
           position: relative;
           display: block;
-          color: rgb(95, 92, 92);
+          color: $dark;
           text-shadow: none;
           font-weight: 400;
           &:hover{
-            color: rgb(255, 82, 1);
-            background-color: rgb(234, 234, 238); 
+            color: #31302f;
+            background-color:  $hover-color; 
         }
       }
       @keyframes slide{
         from{
             opacity: 0;
-      transform: translateY(-20px) translateX(-50px);
+      transform: translateY(-20px) ;
         }to{
             opacity: 1;
-            transform: translateY(0) translateX(-50px);
+            transform: translateY(0);
         }
       }
     }
-    &:focus .dropDown, &:hover .dropDown{
-      display: block;
-      z-index: 1000;
-  }
   
   }
 
@@ -105,7 +126,7 @@ nav{
   }
   .headerBars{
     position: relative;
-    font-size: 30px;
+    top: -15px;
     margin: 0;
     display: none;
     span{
@@ -167,36 +188,64 @@ nav{
     right: 5px;
     top: 25px;
     display: block;
-    z-index: 1000;
+    z-index: 500;
 }
-ul{
-z-index: 100;
-position: fixed;
-top: 0;
-left: 0;
-overflow-y: auto;
-width: 0;
-height: 100%;
-display: flex;
-transition: all 0.5s ease;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: black;
+.list-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  padding: 100px 0;
+  width:0;
+  height: 100%;
+  z-index: 1200;
+  overflow-y: auto;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 500;
+  &::-webkit-scrollbar{
+    visibility: hidden;
+  }
+  &.active{
+animation: fade-in 0.5s ease forwards alternate;
+@keyframes fade-in {
+  to{
+    width: 100%;
+  }
+}
+  }
+  ul{
+    position: relative;
+    transition: all 0.5s ease;
 animation: fadein 0.5s ease forwards;
-li{
-a{
-  color: white;
-  text-shadow: none;
-}
-.fa{
-  display: none;
-}
-}
+    li{
+      display: block;
+      .fa{
+        display: none;
+      }
+      a{
+        color: white;
+      }
+      &.menu{
+        &:hover{
+          .dropDown{
+            display: none;
+          }
+        }
+      }
+    }
 
-&.active{
-  width:100%;
-}
+  }
+  .dropDown{
+    position: relative !important;
+  background-color: transparent !important;
+  border: none !important;
+  a{
+    color: $default-color !important;
+    &:hover{
+      background-color: #31302f !important;
+    }
+  }
+  }
 }
 
 }
@@ -225,9 +274,6 @@ a{
   @include mediumScreen{
     .list-container ul li a{
       color: white;
-      &:hover{
-        color: rgb(255, 82, 1);
-      }
   }
   }
   ul li a{

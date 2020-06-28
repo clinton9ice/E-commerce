@@ -6,7 +6,7 @@
 <meta name="description" content="Get All your products from our Category list or search for a particular product you so desire">
 <meta name="keywords" content="Javascript, HTML, CSS, JSON, REACT">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>LegitMall</title>
+<title>Products</title>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'/>
 <link rel="stylesheet" href="../Css/index.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,27 +18,33 @@
 <nav>
 <h1><a class="site_logo" href="../Index.html">Legit-Mall</a></h1>
 <div class="list-container">
-<ul class="lists">
-<li class="menu"><a>Menu</a>
-<div class="dropDown"> 
-<a href="#" target="_blank">Newslette</a>
-<a href="#">Category</a>
-<a href="#">Products</a>
-<a href="#">shop</a>
-<a href="#">Services</a>
-<a href="#">FAQS</a>
+    <div class="list-container">
+        <ul class="lists">
+        <li class="menu" id="dropdown"><a>Menu</a>
+        <i class="fa fa-caret-down"></i>
+        <div class="dropDown"> 
+        <ul>
+        <li><a href="#" target="_blank">Newslette</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">FAQS</a></li>
+        </ul>
+        </div>
+        </li>
+        <li><a href="#"><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
+        <li><a href="#" title="cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="text"> Cart</span></a></li>
+        
+        
+        <li id="search"><a onclick="document.location.assign('../html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
+        </li>
+        </ul>
+        </div>
 </div>
-</li>
-<li><a><i class="fa fa-shopping-basket"></i><span class="text"> Cart</span></a></li>
-<li><a><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
-
-<li id="search"><a onclick="document.location.assign('../html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
-</li>
-</ul>
 <div class=" headerBars">
-<span class="menu"></span>
-</div>
-</div>
+    <span class="menu"></span>
+    </div>
 </nav>
     <header>
         <div class="header slide carousels">

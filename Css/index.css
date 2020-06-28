@@ -117,6 +117,8 @@ header .header .text-ads .text-btn .default-btn {
 
 .carousels .slides .img_container {
   position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -462,10 +464,10 @@ nav .list-container {
 nav .list-container ul {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 nav .list-container ul li {
-  position: relative;
   display: inline-block;
   list-style: none;
   margin: 0 20px;
@@ -490,19 +492,42 @@ nav .list-container ul li a {
   cursor: pointer;
 }
 
-nav .list-container ul li a:hover {
-  color: #ff5201;
+nav .list-container ul li a .fa-shopping-bag {
+  color: #d1ccad;
 }
 
 nav .list-container ul li.menu {
   padding: 0;
 }
 
+nav .list-container ul li.menu .fa-caret-down {
+  padding-left: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav .list-container ul li.menu .fa-caret-down.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 700px) {
+  nav .list-container ul li.menu .fa-caret-down {
+    color: #fff;
+    display: block;
+    float: right;
+    margin-top: 25px;
+  }
+}
+
 nav .list-container ul li.menu .dropDown {
   position: absolute;
+  left: 0;
+  width: 100%;
   display: none;
-  min-width: 200px;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #dddada;
   border-top: none;
   -webkit-transition: 0.3s all ease;
@@ -510,59 +535,64 @@ nav .list-container ul li.menu .dropDown {
   -webkit-animation: slide 0.5s ease forwards;
           animation: slide 0.5s ease forwards;
   padding: 0;
+  z-index: 10000;
+}
+
+nav .list-container ul li.menu .dropDown ul {
+  position: static;
+}
+
+nav .list-container ul li.menu .dropDown ul li {
+  padding: 0;
+  display: block;
+  margin: auto 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav .list-container ul li.menu .dropDown a {
   margin: 0;
   padding: 0 15px;
-  height: 50px;
-  line-height: 50px;
   position: relative;
   display: block;
-  color: #5f5c5c;
+  color: #000;
   text-shadow: none;
   font-weight: 400;
 }
 
 nav .list-container ul li.menu .dropDown a:hover {
-  color: #ff5201;
-  background-color: #eaeaee;
+  color: #31302f;
+  background-color: #f1f1f1;
 }
 
 @-webkit-keyframes slide {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-20px) translateX(-50px);
-            transform: translateY(-20px) translateX(-50px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0) translateX(-50px);
-            transform: translateY(0) translateX(-50px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes slide {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-20px) translateX(-50px);
-            transform: translateY(-20px) translateX(-50px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0) translateX(-50px);
-            transform: translateY(0) translateX(-50px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-}
-
-nav .list-container ul li.menu:focus .dropDown, nav .list-container ul li.menu:hover .dropDown {
-  display: block;
-  z-index: 1000;
 }
 
 nav .headerBars {
   position: relative;
-  font-size: 30px;
+  top: -15px;
   margin: 0;
   display: none;
 }
@@ -631,44 +661,67 @@ nav .headerBars.active span:after {
     right: 5px;
     top: 25px;
     display: block;
-    z-index: 1000;
+    z-index: 500;
   }
-  nav ul {
-    z-index: 100;
+  nav .list-container {
     position: fixed;
     top: 0;
     left: 0;
-    overflow-y: auto;
+    background: black;
+    padding: 100px 0;
     width: 0;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    z-index: 1200;
+    overflow-y: auto;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 500;
+  }
+  nav .list-container::-webkit-scrollbar {
+    visibility: hidden;
+  }
+  nav .list-container.active {
+    -webkit-animation: fade-in 0.5s ease forwards alternate;
+            animation: fade-in 0.5s ease forwards alternate;
+  }
+  @-webkit-keyframes fade-in {
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes fade-in {
+    to {
+      width: 100%;
+    }
+  }
+  nav .list-container ul {
+    position: relative;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: black;
     -webkit-animation: fadein 0.5s ease forwards;
             animation: fadein 0.5s ease forwards;
   }
-  nav ul li a {
-    color: white;
-    text-shadow: none;
+  nav .list-container ul li {
+    display: block;
   }
-  nav ul li .fa {
+  nav .list-container ul li .fa {
     display: none;
   }
-  nav ul.active {
-    width: 100%;
+  nav .list-container ul li a {
+    color: white;
+  }
+  nav .list-container ul li.menu:hover .dropDown {
+    display: none;
+  }
+  nav .list-container .dropDown {
+    position: relative !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+  nav .list-container .dropDown a {
+    color: #fff !important;
+  }
+  nav .list-container .dropDown a:hover {
+    background-color: #31302f !important;
   }
 }
 
@@ -703,9 +756,6 @@ nav.active .headerBars.active span:after {
 @media screen and (max-width: 700px) {
   nav.active .list-container ul li a {
     color: white;
-  }
-  nav.active .list-container ul li a:hover {
-    color: #ff5201;
   }
 }
 
