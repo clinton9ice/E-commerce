@@ -18,7 +18,7 @@ header{
     width: 100%;
     height: 700px;
     .header{
-background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.788));
+background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.377)),url("../Img/felipe-galvan-AhfrA5VQNpM-unsplash.jpg");
 background-position: top;
 background-attachment: fixed;
 background-size: cover;
@@ -73,6 +73,7 @@ padding: 0 15px;
    z-index: 500;
    opacity: 1;
    margin-left: 12px;
+   background-color: rgba(0, 0, 0, 0.288);
    @include mediumScreen{
      h2{
       font-size: 25px;
@@ -88,7 +89,7 @@ padding: 0 15px;
       img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
       }
     }
     &:nth-child(1){
@@ -126,7 +127,6 @@ padding: 0 15px;
     &:nth-child(3){
      .text-ads{
        opacity: 0;
-    background-color: rgba(0, 0, 0, 0.288);
     animation: left-slide 1s ease forwards;
     @keyframes left-slide {
       from{

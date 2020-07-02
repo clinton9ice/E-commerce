@@ -1,11 +1,13 @@
-$smallDisplay: 300px; 
+$smallDisplay: 500px; 
 $xsmallDisplay: 250px; 
 $mediumDisplay: 700px; 
-$largeDisplay: 1200px; 
+$largeDisplay: 900px;
+$xlarge: 1200px; 
 $primary-color: rgb(250, 72, 2);
 $default-color: #fff;
 $dark: #000;
 $hover-color: rgb(241, 241, 241);
+$light-dark: rgb(183, 185, 187);
 @mixin xsmallScreen {
   @media screen and (max-width: $smallDisplay){
     @content;
@@ -21,8 +23,13 @@ $hover-color: rgb(241, 241, 241);
     @content;
   }
 }
+@mixin  tablet {
+  @media screen and (max-width: $largeDisplay) {
+    @content;
+  }
+}
 @mixin lgScreen {
-  @media screen and (max-width: $largeDisplay){
+  @media screen and (max-width: $xlarge){
     @content;
   }
 }

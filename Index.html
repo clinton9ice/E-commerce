@@ -7,44 +7,46 @@
     <meta name="keywords" content="Javascript, HTML, CSS, JSON, REACT">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LegitMall</title>
-    <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+    <link rel="icon" type="image/png" sizes="17x17" href="./favvy/Ico.png">
+    <link rel="manifest" href="./favvy-01-Jul-2020-190752/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
-<body id="index">
+<body>
+        <nav>
+        <h1 class="site_logo">Legit-Mall</h1>
+        <div class="list-container">
+        <ul class="lists">
+        <li class="menu" id="dropdown"><a>Menu</a>
+        <i class="fa fa-caret-down"></i>
+        <div class="dropDown"> 
+        <ul>
+        <li><a href="#" target="_blank">Newslette</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="./html/product.html">Products</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">FAQS</a></li>
+        </ul>
+        </div>
+        </li>
+        <li><a href="#"><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
+        <li><a href="#" title="cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="text"> Cart</span></a></li>
+        
+        
+        <li id="search"><a onclick="document.location.assign('../html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
+        </li>
+        </ul>
+        </div>
+        <div class=" headerBars">
+        <span class="menu"></span>
+        </div>
+        </nav>
 <header>
-<nav>
-<h1 class="site_logo">Legit-Mall</h1>
-<div class="list-container">
-<ul class="lists">
-<li class="menu" id="dropdown"><a>Menu</a>
-<i class="fa fa-caret-down"></i>
-<div class="dropDown"> 
-<ul>
-<li><a href="#" target="_blank">Newslette</a></li>
-<li><a href="#">Category</a></li>
-<li><a href="./html/product.html">Products</a></li>
-<li><a href="#">shop</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">FAQS</a></li>
-</ul>
-</div>
-</li>
-<li><a href="#"><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
-<li><a href="#" title="cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="text"> Cart</span></a></li>
-
-
-<li id="search"><a onclick="document.location.assign('../html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
-</li>
-</ul>
-</div>
-<div class=" headerBars">
-<span class="menu"></span>
-</div>
-</nav>
-<div class="header" style="background-image: url('./img/ussama-azam-hlg-ltdCoI0-unsplash.jpg'); background-position: center;">
+<div class="header">
 <div class="text-ads" id="section-1-ads">
 
 <h2 id="Header_title"> Shop Now</h2> 
@@ -875,20 +877,6 @@ This is assumed to be a featured Product from another site
 
 </section>
 
-
-<!-----------fixed-icon------------->
-<div class="fixedIcon">
-<div class="icon">
-<div  class="iconBtn">+</div>
-</div>
-<div class="social-icon" id="social-icon">
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-instagram" target="_blank"></a>
-<a href="#" class="fa fa-linkedin" target="_blank"></a>
-<a href="#" class="fa fa-whatsapp" target="_blank"></a>
-</div>
-</div>
-
    <!------------Reviews-->
 <section class=" reviewSection">
 <h2 class="reviewHeader">Reviews</h2>
@@ -933,7 +921,7 @@ This is assumed to be a featured Product from another site
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
-<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus animi quis deserunt laudantium! Dolore voluptate officiis facere nostrum, asperiores a consequatur?
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus eveniet, a voluptatibus
 
 </p>
 </div>
@@ -955,7 +943,7 @@ This is assumed to be a featured Product from another site
           <p>sales@clintonufere.com.ng</p>
          <h4>WORKING DAYS/HOURS:</h4>
           <p>Mon-Sat/9:00 AM - 5:00 PM</p>
-     </address> 
+ </address> 
 
 
 <div class="footer_row">
@@ -968,6 +956,7 @@ This is assumed to be a featured Product from another site
 </div> 
 </form>
 </div>
+
 <div class=" footer-links footer_row">
     <h3>Main Features</h3>
     <a href="#">Customer Care</a>
@@ -986,12 +975,16 @@ This is assumed to be a featured Product from another site
             <a href="#">Order History</a>
             <a href="#">Login</a>
             </p>
-    </div>
-           
-         
+    </div>  
+    <div class="ico-container">
+        <div class="icons">
+          <a href="#">  <i class="fa fa-facebook"></i></a>
+          <a href="#">  <i class="fa fa-instagram"></i></a>
+          <a href="#">  <i class="fa fa-linkedin"></i></a>
+          <a href="#">  <i class="fa fa-twitter"></i></a>
+        </div>
+        </div>
 </div>
-    
-           
 <div class="copyright">             
 Copyright: &copy; 2019 Clinton | All Right Reserved
 </div>

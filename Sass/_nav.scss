@@ -1,8 +1,10 @@
 @import "./config";
-nav h1, nav div, nav i{
+nav h1,
+nav div,
+nav i {
   display: inline-block;
-  }
-nav{
+}
+nav {
   position: absolute;
   left: 0;
   color: #fff;
@@ -13,123 +15,117 @@ nav{
   padding: 0 10px;
   transition: 0.5s all ease;
   font-size: 22px;
-  .site_logo{
+  .site_logo {
     letter-spacing: 4px;
     font-weight: 400;
     margin: 0 12px;
     color: #fff;
     text-decoration: none;
-    @include xsmallScreen{
-     font-size: 20px;
-     letter-spacing: 3px;
+    @include xsmallScreen {
+      font-size: 20px;
+      letter-spacing: 3px;
     }
     font-size: calc(22px * 100%);
-    @include mediumScreen{
+    @include mediumScreen {
       margin: 0 12px 0 0px;
     }
-    }
- 
-    .list-container{
-      float: right;
-      ul{
-        margin: 0;
-        padding: 0;
-        position: relative;
-        li{
-          display: inline-block;
-          list-style: none;
-          margin: 0 20px;
-          .text{
-            display: none;
-            @include mediumScreen{
-              display: block;
-            }
+  }
+
+  .list-container {
+    float: right;
+    ul {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 20px;
+        .text {
+          display: none;
+          @include mediumScreen {
+            display: block;
+          }
         }
-        a{
+        a {
           transition: 0.3s all ease;
           color: rgb(255, 255, 255);
           font-weight: 500;
           text-decoration: none;
           cursor: pointer;
-          .fa-shopping-bag{
-            color: rgb(209, 204, 173);
+        }
+        &.menu {
+          padding: 0;
+          .fa-caret-down {
+            padding-left: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            &.active {
+              transform: rotate(-180deg);
+              transition: all 0.5s ease;
+            }
+            @include mediumScreen {
+              color: $default-color;
+              display: block;
+              float: right;
+              margin-top: 25px;
+            }
           }
-      }
-    &.menu{
-      padding: 0;
-      .fa-caret-down{
-        padding-left: 4px;
-       font-weight: 500;
-       cursor: pointer;
-       &.active{
-        transform: rotate(-180deg);
-        transition: all 0.5s ease;
-      }
-       @include mediumScreen{
-         color: $default-color;
-         display: block;
-         float: right;
-         margin-top: 25px;
-         
-       }
-       }
-      .dropDown{
-        position: absolute;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: $default-color;
-        border: 1px solid rgb(221, 218, 218);
-        border-top: none;
-        transition:0.3s all ease;
-        animation: slide 0.5s ease forwards;
-        padding: 0;
-        z-index: 10000;
-        ul{
-          position: static;
-          li{
+          .dropDown {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            display: none;
+            background-color: $default-color;
+            border: 1px solid rgb(221, 218, 218);
+            border-top: none;
+            transition: 0.3s all ease;
+            animation: slide 0.5s ease forwards;
             padding: 0;
-            display: block;
-            margin: auto 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            z-index: 10000;
+            ul {
+              position: static;
+              li {
+                padding: 0;
+                display: block;
+                margin: auto 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+              }
+            }
+            a {
+              margin: 0;
+              padding: 0 15px;
+              position: relative;
+              display: block;
+              color: $dark;
+              text-shadow: none;
+              font-weight: 400;
+              &:hover {
+                color: #31302f;
+                background-color: $hover-color;
+              }
+            }
+            @keyframes slide {
+              from {
+                opacity: 0;
+                transform: translateY(-20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
           }
         }
-        a{
-          margin:  0;
-          padding: 0 15px;
-          position: relative;
-          display: block;
-          color: $dark;
-          text-shadow: none;
-          font-weight: 400;
-          &:hover{
-            color: #31302f;
-            background-color:  $hover-color; 
-        }
-      }
-      @keyframes slide{
-        from{
-            opacity: 0;
-      transform: translateY(-20px) ;
-        }to{
-            opacity: 1;
-            transform: translateY(0);
-        }
       }
     }
-  
   }
-
-  }
-
-    }
-  }
-  .headerBars{
+  .headerBars {
     position: relative;
     top: -15px;
     margin: 0;
     display: none;
-    span{
+    span {
       display: block;
       width: 30px;
       height: 3px;
@@ -138,148 +134,151 @@ nav{
       cursor: pointer;
       transition: all 0.5s ease;
       border-radius: 25px;
-      &:before{
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 8px 0;
-    border-radius: 25px;
-    z-index: 1000;
-}
-&:after{
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 4px;
-  background-color: white;
-  margin: 15px 0;
-  border-radius: 25px;   
-}
-  }
-  &.active{
-    span{
-      position: fixed;
-      right: 0;
-      background-color: red;
-      z-index: 100;
-      transform: rotate( 50deg) translateX(10px);
-      width: 20px;
-      z-index: 1000;
-      &:before{
-        display: none;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 8px 0;
+        border-radius: 25px;
+        z-index: 1000;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 4px;
+        background-color: white;
+        margin: 15px 0;
+        border-radius: 25px;
+      }
     }
-    &:after{
-      position: fixed;
-      right: 0;
-       width: 20px;
-       transform: rotate(80deg) translateX(-15px) translateY(-2px);
-       background-color: red;
-       z-index: 1000;
+    &.active {
+      span {
+        position: fixed;
+        right: 0;
+        background-color: red;
+        z-index: 100;
+        transform: rotate(50deg) translateX(10px);
+        width: 20px;
+        z-index: 1000;
+        &:before {
+          display: none;
+        }
+        &:after {
+          position: fixed;
+          right: 0;
+          width: 20px;
+          transform: rotate(80deg) translateX(-15px) translateY(-2px);
+          background-color: red;
+          z-index: 1000;
+        }
       }
+    }
   }
-   
-  }
-}
-@include mediumScreen{
-  .headerBars{
-    position: absolute;
-    right: 5px;
-    top: 25px;
-    display: block;
-    z-index: 500;
-}
-.list-container{
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: black;
-  padding: 100px 0;
-  width:0;
-  height: 100%;
-  z-index: 1200;
-  overflow-y: auto;
-  font-family: 'Times New Roman', Times, serif;
-  z-index: 500;
-  &::-webkit-scrollbar{
-    visibility: hidden;
-  }
-  &.active{
-animation: fade-in 0.5s ease forwards alternate;
-@keyframes fade-in {
-  to{
-    width: 100%;
-  }
-}
-  }
-  ul{
-    position: relative;
-    transition: all 0.5s ease;
-animation: fadein 0.5s ease forwards;
-    li{
+  @include mediumScreen {
+    .headerBars {
+      position: absolute;
+      right: 5px;
+      top: 25px;
       display: block;
-      .fa{
-        display: none;
+      z-index: 500;
+    }
+    .list-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: black;
+      padding: 100px 0;
+      width: 0;
+      height: 100%;
+      z-index: 1200;
+      overflow-y: auto;
+      font-family: "Times New Roman", Times, serif;
+      z-index: 500;
+      &::-webkit-scrollbar {
+        visibility: hidden;
       }
-      a{
-        color: white;
+      &.active {
+        animation: fade-in 0.5s ease forwards alternate;
+        @keyframes fade-in {
+          to {
+            width: 100%;
+          }
+        }
       }
-      &.menu{
-        &:hover{
-          .dropDown{
+      ul {
+        position: relative;
+        transition: all 0.5s ease;
+        animation: fadein 0.5s ease forwards;
+        li {
+          display: block;
+          .fa {
             display: none;
+          }
+          a {
+            color: white;
+          }
+          &.menu {
+            &:hover {
+              .dropDown {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .dropDown {
+        position: relative !important;
+        background-color: transparent !important;
+        border: none !important;
+        a {
+          color: $default-color !important;
+          &:hover {
+            background-color: #31302f !important;
           }
         }
       }
     }
-
   }
-  .dropDown{
-    position: relative !important;
-  background-color: transparent !important;
-  border: none !important;
-  a{
-    color: $default-color !important;
-    &:hover{
-      background-color: #31302f !important;
+  &.active {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    transition: 0.5s all ease;
+    color: rgb(53, 38, 32);
+    z-index: 1500;
+    border-bottom: none;
+    box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
+    .site_logo {
+      color: #000;
+    }
+    .headerBars span,
+    .headerBars span:before,
+    .headerBars span:after {
+      background-color: black;
+    }
+    .headerBars.active {
+      span {
+        background-color: red;
+        &:after {
+          background-color: red;
+        }
+      }
+    }
+    @include mediumScreen {
+      .list-container ul li a {
+        color: white;
+      }
+    }
+    ul li a {
+      color: rgb(43, 43, 46);
+      text-shadow: none;
+      cursor: pointer;
+      .fa-shopping-bag {
+        color: rgba(141, 136, 131, 0.842);
+      }
     }
   }
-  }
-}
-
-}
-&.active{
-  position: fixed;
-  background-color: white;
-  transition: 0.5s all ease;
-  color: rgb(53, 38, 32);
-  z-index: 1500;
-  border-bottom: none;
-  box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
-  .site_logo{
-    color: #000;
-  }
-  .headerBars span,  .headerBars span:before,  .headerBars span:after{
-    background-color: black;
-  }   
-.headerBars.active{
-  span{
-    background-color: red; 
-    &:after{
-      background-color: red;
-    }  
-  }
-}
-  @include mediumScreen{
-    .list-container ul li a{
-      color: white;
-  }
-  }
-  ul li a{
-    color: rgb(43, 43, 46);
-    text-shadow: none;
-}
-}
-
 }

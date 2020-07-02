@@ -4,13 +4,14 @@ footer{
   position: relative;
   width: 100%;
   background: black;
-  color: white;
+  color: #fff;
   display: block;
   padding: 15px;
+  font-size: 17px;
   .footer{
+    position: relative;
   @include flexWrap;
   align-items: center;
-  justify-content: space-between;
     margin:0 auto 15px;
     h2, h3{
       margin-bottom: 12px;
@@ -20,13 +21,11 @@ footer{
         line-height: 1.7;
     }
     .footer_row{
+      position: relative;
       margin: 0 20px 40px;
-      width: 400px;
-      @include lgScreen{
-        width: 100%;
-      }
+      max-width: 400px;
       form .form{
-        width: 200px;
+        max-width: 200px;
         height: 40px;
         margin: 20px 0;
         input{
@@ -51,7 +50,6 @@ footer{
       }
       .footer-links{
        position: relative;
-       width: 300px;
        line-height: 1.5;
        margin:  0 20px 0 0;
 
@@ -68,5 +66,40 @@ footer{
   text-align: center;
   padding: 15px 0;
  border-top: 1px solid rgb(32, 33, 36);
+}
+.ico-container{
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  @include mediumScreen{
+    position: relative;
+    bottom: 0;
+  }
+  @include smallScreen{
+   position: absolute;
+    bottom: 0;
+  }
+  .icons{
+margin-left: 10px;
+a{
+  margin: 15px;
+}
+.fa{
+  font-size: 25px;
+  margin-bottom: 20px;
+  &.fa-twitter{
+    color: rgb(130, 210, 247);
+  }
+  &.fa-linkedin{
+    color: rgb(71, 71, 252);
+  }
+  &.fa-instagram{
+    color: rgb(241, 102, 102);
+  }
+  &.fa-facebook{
+    color: rgb(52, 142, 245);
+  }
+}
+  }
 }
 }
