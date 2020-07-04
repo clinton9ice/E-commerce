@@ -435,15 +435,15 @@ nav .headerBars.active span:after {
     visibility: hidden;
   }
   nav .list-container.active {
-    -webkit-animation: fade-in 0.5s ease forwards alternate;
-            animation: fade-in 0.5s ease forwards alternate;
+    -webkit-animation: slide 0.5s ease forwards alternate;
+            animation: slide 0.5s ease forwards alternate;
   }
-  @-webkit-keyframes fade-in {
+  @-webkit-keyframes slide {
     to {
       width: 100%;
     }
   }
-  @keyframes fade-in {
+  @keyframes slide {
     to {
       width: 100%;
     }

@@ -202,8 +202,8 @@ nav {
         visibility: hidden;
       }
       &.active {
-        animation: fade-in 0.5s ease forwards alternate;
-        @keyframes fade-in {
+        animation: slide 0.5s ease forwards alternate;
+        @keyframes slide {
           to {
             width: 100%;
           }
