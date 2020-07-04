@@ -1,3 +1,8 @@
+.max-width {
+  max-width: 1400px;
+  margin: 12px auto;
+}
+
 /*--------Search--page----------*/
 .searchContainer {
   -webkit-transition: all 0.5s ease;
@@ -94,7 +99,7 @@
   border: 1px solid #cecbcb;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .searchContainer .nav form .formContainer {
     width: 100%;
   }

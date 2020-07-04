@@ -1,7 +1,7 @@
 "use strict"
 let i,
  index = 0; 
-
+let a = true;
  //data
  let carouselData = {
 first_data:{
@@ -18,6 +18,7 @@ third_data: {
 }
  }
 $(document).ready(function(){
+  //lazy loader
 $(function(){
   let loader_container, loaderChild, p;
   loader_container = document.createElement("div")
@@ -40,9 +41,9 @@ $('#dropdown').click(function(event){
 })
 
 //carousel Section
-let slider = document.querySelector(".slide").children
+let slide =  $(".slide").children();
 let carousel = function carouselFunction(){
-  if(index >= slider.length-1){
+  if(index >=$(slide).length-1){
     index = 0;
     }
     else{
@@ -66,12 +67,12 @@ $(function(){
   $("#third-carousel-data span .txt").html(carouselData.third_data.textContent)
 
 })
-let interval = setInterval(carousel, 5000)
+
 function sliderFunction(){
-  for(var i = 0; i < slider.length; i++){
-    slider[i].classList.remove("active")
+  for(var i = 0; i < $(slide).length; i++){
+    $(slide)[i].classList.remove("active")
     }
-    slider[index].classList.add("active")
+    $(slide)[index].classList.add("active")
  }
 $("#next").on({
   click: function(){
@@ -81,7 +82,7 @@ $("#next").on({
 
 $("#prev").click(function(){
   if(index == 0){
-    index = slider.length-1
+    index = $(slide).length-1
     }else{
     index --
     }

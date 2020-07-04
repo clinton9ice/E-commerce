@@ -7,11 +7,9 @@
 <meta name="keywords" content="Javascript, HTML, CSS, JSON, REACT">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Products</title>
-<link rel="icon" type="image/png" sizes="17x17" href="../favvy/Ico.png">
-<link rel="manifest" href="../favvy-01-Jul-2020-190752/site.webmanifest">
-<meta name="msapplication-config" content="/browserconfig.xml" />
+<link rel="icon" type="image/png" href="../favicon.ico">
 <link rel="stylesheet" href="../Css/index.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/c9b31d92fc.js" crossorigin="anonymous"></script>
 <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
@@ -19,11 +17,10 @@
     <!------------Navbar--------------->
 <nav>
 <h1><a class="site_logo" href="../Index.html">Legit-Mall</a></h1>
-<div class="list-container">
     <div class="list-container">
         <ul class="lists">
         <li class="menu" id="dropdown"><a>Menu</a>
-        <i class="fa fa-caret-down"></i>
+         <i class="fas fa-caret-down"></i>
         <div class="dropDown"> 
         <ul>
         <li><a href="#" target="_blank">Newslette</a></li>
@@ -36,67 +33,26 @@
         </div>
         </li>
         <li><a href="#"><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
-        <li><a href="#" title="cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="text"> Cart</span></a></li>
+        <li>
+            <a href="#" title="cart">
+            <i class="fas fa-luggage-cart"></i>
+            <span class="text"> Cart</span></a>
+        </li>
         
         
         <li id="search"><a onclick="document.location.assign('../html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
         </li>
         </ul>
         </div>
-</div>
+
 <div class=" headerBars">
     <span class="menu"></span>
     </div>
 </nav>
-    <header>
-        <div class="header slide carousels">
-            <div class="slides active slide-1">
-                <div class="img_container">
-                    <img src="../Img/Electric guitar.jpg" alt="">
-                </div>
-                <div class="text-ads" id="section-1-ads">
-                <h2 class="carousel-header">Electric Guitar</h2> 
-                <p id="text-content">Electric Guitar are the best and can be gotten at a very affordable price. <br> it is one of the best instrumentals in music
-                </p>  
-                </div>
-            </div>
-            <div class="slides slide-2">
-                <div class="img_container">
-                    <img src="../Img/ussama-azam-hlg-ltdCoI0-unsplash.jpg"alt="purple Sleeve">
-                </div>
-                <div class="text-ads" id="section-1-ads">
-                <h2 class="carousel-header">Get the best Outfit at an affordable price today.</h2>  
-                </div>
-            </div>
-            <div class="slides slide-3">
-                <div class="img_container">
-                    <img src="../Img/doughnut.jpg" alt="Doughnut">
-                </div>
-                <div class="text-ads" id="section-1-ads">
-                <h2 class="carousel-header">What do you think about doughnuts?</h2> 
-                <p id="content">Doughnut is one of the fatest and sweet foods to eat. Get one today and make it count.
-                </p>  
-                </div>
-            </div>
-            <div class="slides slide-4">
-                <div class="img_container">
-                    <img src="../Img/Coca cola.jpg" alt="">
-                </div>
-                <div class="text-ads" id="section-1-ads">
-                <h2 class="carousel-header">Start your day with coca cola</h2> 
-               
-                </div>
-            </div>
-            <div class="slides slide-5">
-                <div class="img_container">
-                    <img src="../Img/Iphone.jpg" alt="Iphone-watch">
-                </div>
-                <div class="text-ads" id="section-1-ads">
-                <h2 class="carousel-header">Get the brand new Iphone X Today and Explore The Best Camera</h2> 
-               
-                </div>
-            </div>
-            </div>
+<header id="Product">
+<div class="headerTxt">
+<h2>Products</h2>
+</div>
     </header>
 <div class="intro-icon row">
     <span class="first-child">Fashion</span>
@@ -167,7 +123,12 @@
 <div class="three-rows row">
     <!----Shoe-->
     <span class="cols col-one">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
         <img src="../Img/Shoes/scott-kelly-h-Bkya1hamI-unsplash-min.jpg" alt="Scott kelly shoe">
+    </div>
         <div class="footer row">
             <div class="name">Shoes</div>
             <div class="count">40</div>
@@ -175,7 +136,11 @@
     </span>
     <!-----Shirt-->
     <span class="cols col-two">
-        <img src="../Img/Shirts/gez-xavier-mansfield-b34E1vh1tYU-unsplash.jpg" alt="">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
+        <img src="../Img/Shirts/gez-xavier-mansfield-b34E1vh1tYU-unsplash.jpg" alt=""></div>
         <div class="footer row">
             <div class="name">Shirts</div>
             <div class="count">50</div>
@@ -183,7 +148,12 @@
     </span>
     <!---Trouser-->
     <span class="cols col-three">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
         <img src="../Img/Trousers/blue-denim-bottoms-1082526.jpg" alt="Trouser">
+        </div>
         <div class="footer row">
             <div class="name">Trouser</div>
             <div class="count">50</div>
@@ -194,15 +164,24 @@
 <div class="three-rows row">
     <!----Canvas----->
     <span class="cols col-one">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
         <img src="../Img/Drawings/buse-doga-ay-qKLhH5PJ2LM-unsplash.jpg" alt="buse-doga-ay-qKLhH5PJ2LM-unsplash.">
+        </div>
         <div class="footer row">
             <div class="name">canvas</div>
             <div class="count">20</div>
         </div>
     </span>
 <!-----Eye-glasses-->
-    <span class="cols col-two">  
-        <img src="../Img/Eye Glasses/viktor-forgacs-w1ELNajqfwk-unsplash.jpg" alt="glasses">
+    <span class="cols col-two"> 
+        <div class="img"> 
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
+        <img src="../Img/Eye Glasses/viktor-forgacs-w1ELNajqfwk-unsplash.jpg" alt="glasses"></div>
          <div class="footer row">
         <div class="name">Eye Glasses</div>
         <div class="count">27</div>
@@ -210,7 +189,12 @@
 </span>
 <!------Bags------>
 <span class="cols col-three">
+    <div class="img">
+        <div class="hidden">
+            <span class="link"><a href="#">Explore</a></span>
+        </div>
 <img src="../Img/Bags/icons8-team-k5fUTay0ghw-unsplash.jpg" alt="Bags">
+</div>
 <div class="footer row">
     <div class="name">Bags</div>
     <div class="count">40</div>
@@ -221,7 +205,12 @@
 <div class="three-rows row">
     <!-----Laptops-->
     <span class="cols col-one">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
         <img src="../Img/laptops/alexandru-acea-rmHTCPXUk9g-unsplash.jpg" alt="laptop">
+    </div>
         <div class="footer row">
             <div class="name">Laptops</div>
             <div class="count">10</div>
@@ -229,7 +218,12 @@
     </span>
     <!-----Phone-->
     <span class="cols col-two">
-        <img src="../Img/Phones/vinoth-ragunathan-EAge0E9epX0-unsplash.jpg" alt="">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
+        <img src="../Img/Phones/vinoth-ragunathan-EAge0E9epX0-unsplash.jpg" alt="Phone">
+        </div>
         <div class="footer row">
             <div class="name">phones</div>
             <div class="count">33</div>
@@ -237,7 +231,12 @@
     </span>
     <!---------Watch----->
     <span class="cols col-three">
-        <img src="../Img/Watch/john-torcasio-TJrkkhdB39E-unsplash.jpg" alt="">
+        <div class="img">
+            <div class="hidden">
+                <span class="link"><a href="#">Explore</a></span>
+            </div>
+        <img src="../Img/Watch/john-torcasio-TJrkkhdB39E-unsplash.jpg" alt="Watch">
+        </div>
         <div class="footer row">
             <div class="name">Watch</div>
             <div class="count">12</div>
@@ -248,10 +247,46 @@
     <a href="#">See All Item</a>
     </div>
 </section>
-
-<section class="3rd-col">
-
+<!----srevices-->
+<section id="services" class="max-width">
+<div class="service-container">
+<h3>The Service we provide</h3>
+<div class="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quo nam error tempora earum dolore cumque ullam consequatur illo reiciendis.</div>
+</div>
+<div class="card-container">
+    <div class="cards row">
+        <span class="card first-row">
+            <div class="icon">
+                <i class="fa fa-cube" aria-hidden="true"></i>
+                <h4>Custom Product</h4>
+            </div>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In aut enim officiis eligendi? Cum, amet. Fugiat sit iste architecto. Quis.
+                </p>
+        </span>
+        <span class="card second-row">
+            <div class="icon">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Products Warranty</h4>
+            </div>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In aut enim officiis eligendi? Cum, amet. Fugiat sit iste architecto. Quis.
+            </p>
+        </span>
+        <span class="card third-row">
+            <div class="icon">
+                <i class="fas fa-shipping-fast"></i>
+                <h4>Free Shipping</h4>
+            </div>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In aut enim officiis eligendi? Cum, amet. Fugiat sit iste architecto. Quis.
+            </p>
+        </span>
+    </div>
+ 
+</div>
 </section>
+
 <footer>
 <div class="footer">
 <address class="footer_row">
@@ -296,14 +331,14 @@
 <a href="#">Login</a>
 </p>
 </div>  
-<div class="ico-container">
+<!-- <div class="ico-container">
 <div class="icons">
 <a href="#">  <i class="fa fa-facebook"></i></a>
 <a href="#">  <i class="fa fa-instagram"></i></a>
 <a href="#">  <i class="fa fa-linkedin"></i></a>
 <a href="#">  <i class="fa fa-twitter"></i></a>
 </div>
-</div>
+</div> -->
 </div>
 <div class="copyright">             
 Copyright: &copy; 2019 Clinton | All Right Reserved

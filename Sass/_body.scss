@@ -17,17 +17,24 @@ header{
   position: relative;
     width: 100%;
     height: 700px;
-    .header{
-background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.377)),url("../Img/felipe-galvan-AhfrA5VQNpM-unsplash.jpg");
-background-position: top;
-background-attachment: fixed;
-background-size: cover;
-height: 100%;
-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .headerTxt{
 @include flexcenter;
-position: relative;
-padding: 0 15px;
-  overflow: hidden;
+ height: 100%;
+ width: 100%;
+ background: linear-gradient(rgba(0,0,0,0.588), rgba(12,12,5, 0.5));
+ color: #fff;
+ font-size: 2rem;
+    }
+    &#Product{
+    background-image: url('../Img/Products/raul-hender-afc4HxPy2GM-unsplash.jpg');
+  }
+  &#home{
+background-image: url('../Img/felipe-galvan-AhfrA5VQNpM-unsplash.jpg');;
+  }
   .text-ads{
     color: white;
     font-size: 22px;
@@ -55,160 +62,4 @@ padding: 0 15px;
 }
 }
   } 
-  }
-}
-.carousels{
-  .slides{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-  align-items: center;
-  justify-content: center;
- 
-  .text-ads{
-   z-index: 500;
-   opacity: 1;
-   margin-left: 12px;
-   background-color: rgba(0, 0, 0, 0.288);
-   @include mediumScreen{
-     h2{
-      font-size: 25px;
-     }
-     font-size: 18px;
-   }
-  }
-    .img_container{
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-      }
-    }
-    &:nth-child(1){
-      opacity: 0;
-      animation: fade-in 0.5s ease forwards;
-      .text-ads{
-        .carousel-header{
-          opacity: 0;
-          animation: drop 0.5s ease forwards;
-          animation-delay: 0.8s;
-        }
-        #content{
-          opacity: 0;
-          animation:left-slide 0.5s ease forwards;
-          animation-delay: 1.2s;
-        }
-      }
-    }
-    &:nth-child(2){
-      opacity: 0;
-      animation: left-slide 0.5s ease forwards;
-      .text-ads{
-        .carousel-header{
-          opacity: 0;
-          animation: fade-in 0.8s ease forwards;
-          animation-delay: 1.2s;
-        }
-        #content{
-          opacity: 0;
-          animation: slow-fade 1.5s ease forwards;
-          animation-delay: 1.9s;
-        }
-      }
-    }
-    &:nth-child(3){
-     .text-ads{
-       opacity: 0;
-    animation: left-slide 1s ease forwards;
-    @keyframes left-slide {
-      from{
-        transform: translateX(-800px);
-        opacity: 0.5;
-      }to{
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-    #content{
-      opacity: 0;
-      animation: slow-fade 0.5s ease forwards;
-      animation-delay: 2s;
-    }
-     }
-     opacity: 0;
-     animation-delay:1.5s;
-     animation: slow-fade 0.5s ease forwards;
-    }
-    &:nth-child(4){
-      .img_container{
-        img{
-          animation: slow-fade 0.5s linear forwards;
-          opacity: 0;
-          @keyframes slow-fade {
-            from{
-              transform: scale(0.5);
-              opacity: 0.5;
-            }
-            to{
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
-        }
-      }
-      .text-ads{
-        animation: bottom-top 0.5s ease forwards;
-        animation-delay: 1.4s;
-        opacity: 0;
-        transform: translateY(500px);
-        @keyframes bottom-top{
-          to{
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-      }
-    }
-    &:nth-child(5){
-  animation: drop 0.5s ease forwards;
-  opacity: 0;
-  @keyframes drop {
-    from{
-transform: translateY(-400px) scale(1.2);
-opacity: 0.5;
-    }to{
-      transform: translateY(1) scale(1);
-      opacity: 1;
-    }
-  }
-      .text-ads{
-        opacity: 0;
-        animation: fade-in 0.5s linear forwards;
-        animation-delay: 1.2s;
-        animation-play-state: running
-        ;
-        @keyframes fade-in {
-          from{
-            transform: scale(1.5) rotate(120deg);
-            opacity: 0.5;
-          }to{
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-      }
-    }
-    &.active{
-      display: flex;
-    }
-  }
- 
 }
