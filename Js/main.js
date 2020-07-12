@@ -106,4 +106,37 @@ else{
 $(".fixedIcon").css("display", "none")
 }
 })
+//form
+let name = document.querySelector
+  ("input[type='text']")
+  let isActive = true;
+  $(".ico").click(()=>{
+if(isActive){
+  $(".ico").attr("class", "fa fa-eye")
+  $(pass).attr("type", "text")
+  isActive = false
+}else{
+  $(".ico").attr("class", "fa fa-eye-slash")
+  $(pass).attr("type", "password")
+  isActive = true
+}
+  })
+  let pass = document.querySelector
+  ("input[type='password']")
+$('form').submit(function(){
+  if(name.value == "" || pass.value==""){
+    alert('Please fill in your details')
+     return false
+  } 
+})
+$("#form-btn").mouseover(function(){
+  if(name.value == "" || pass.value == ""){
+    $(this).css("cursor","not-allowed")
+    }
+    else{
+      $(this).css("cursor","pointer")
+    }
+})
+
+
 })
