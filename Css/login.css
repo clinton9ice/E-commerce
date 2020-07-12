@@ -578,8 +578,8 @@ nav.active ul li a .fa-luggage-cart {
 
 .container {
   position: relative;
-  margin: 7rem auto;
-  overflow: hidden;
+  margin: 7rem auto 0;
+  overflow-x: hidden;
   max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,6 +609,7 @@ nav.active ul li a .fa-luggage-cart {
 @media screen and (max-width: 500px) {
   .container {
     padding: 0;
+    margin-top: 20px;
   }
 }
 
@@ -621,7 +622,6 @@ nav.active ul li a .fa-luggage-cart {
 
 @media screen and (max-width: 750px) {
   .imgSection {
-    height: 400px;
     width: 100%;
     border-radius: 20px;
   }
@@ -660,9 +660,9 @@ nav.active ul li a .fa-luggage-cart {
     width: 500px;
     height: 100%;
     margin: 0 auto;
-    border-radius: 20px 20px 0 0;
+    border-radius: 25px 25px 0 0;
     padding: 10px;
-    top: -80px;
+    margin-top: -80px;
     -webkit-box-shadow: 0 0 15px rgba(233, 229, 229, 0.575), 0 4px 33px white;
             box-shadow: 0 0 15px rgba(233, 229, 229, 0.575), 0 4px 33px white;
   }
@@ -671,7 +671,7 @@ nav.active ul li a .fa-luggage-cart {
 @media screen and (max-width: 500px) {
   .formSection {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
   }
 }
 

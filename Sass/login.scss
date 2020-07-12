@@ -43,8 +43,8 @@
 }
 .container {
   position: relative;
-  margin: 7rem auto;
-  overflow: hidden;
+  margin: 7rem auto 0;
+  overflow-x: hidden;
   max-width: $max-width;
   @include flexcenter;
  flex-direction: row;
@@ -54,6 +54,7 @@
  }
   @include smallScreen{
     padding: 0;
+    margin-top: 20px;
   }
 }
 .imgSection {
@@ -70,7 +71,7 @@
     url("https://images.unsplash.com/photo-1592840078849-627344f3bbf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat;
     background-size: cover;
     @include mediumScreen{
-    height: 400px;
+  
     width: 100%;
     border-radius: 20px;
   }
@@ -101,14 +102,14 @@
     width: 500px;
     height: 100%;
     margin: 0 auto;
-    border-radius: 20px 20px 0 0;
+    border-radius: 25px 25px 0 0;
     padding: 10px;
-    top: -80px;
+    margin-top: -80px;
     box-shadow: 0 0 15px rgba(233, 229, 229, 0.575), 0 4px 33px rgb(255, 255, 255);
   }
   @include smallScreen {
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+    padding: 20px;
   }
  
 }

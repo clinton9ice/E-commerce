@@ -30,7 +30,6 @@ document.body.appendChild(loader_container)
 })
 
   //Hamburgger Menu
-  let desktop = true;
 $('.headerBars').click(function(){
   $(".list-container").toggleClass("active")
 $(this).toggleClass("active")
@@ -113,11 +112,13 @@ let name = document.querySelector
   let isActive = true;
   $(".ico").click(()=>{
 if(isActive){
-  $(".ico").attr("class", "fa fa-eye")
+  $(".ico").removeClass("fa-eye-slash")
+  $(".ico").addClass("fa-eye")
   $(pass).attr("type", "text")
   isActive = false
 }else{
-  $(".ico").attr("class", "fa fa-eye-slash")
+  $(".ico").removeClass("fa-eye")
+  $(".ico").addClass("fa-eye-slash")
   $(pass).attr("type", "password")
   isActive = true
 }
