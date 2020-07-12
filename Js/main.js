@@ -30,13 +30,14 @@ document.body.appendChild(loader_container)
 })
 
   //Hamburgger Menu
+  let desktop = true;
 $('.headerBars').click(function(){
   $(".list-container").toggleClass("active")
 $(this).toggleClass("active")
 })
 $('#dropdown').click(function(event){
-  $('.dropDown').slideToggle(100)
-  $('.fa-caret-down').toggleClass("active")
+$('.dropDown').slideToggle(100)
+$('.fa-caret-down').toggleClass("active")
 
 })
 

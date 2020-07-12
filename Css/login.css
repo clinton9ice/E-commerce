@@ -206,6 +206,7 @@ nav .site_logo {
 
 @media screen and (max-width: 750px) {
   nav .site_logo {
+    font-size: 30px;
     margin: 0 12px 0 0px;
   }
 }

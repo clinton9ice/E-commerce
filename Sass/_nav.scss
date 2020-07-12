@@ -27,6 +27,7 @@ nav {
     }
     font-size: calc(22px * 100%);
     @include mediumScreen {
+      font-size: 30px;
       margin: 0 12px 0 0px;
     }
   }
