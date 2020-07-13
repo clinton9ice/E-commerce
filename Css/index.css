@@ -527,7 +527,8 @@ section {
 
 section.md-col {
   margin: 90px auto;
-  padding: 5px;
+  padding: 10px 5px;
+  background-color: rgba(251, 251, 252, 0.5);
   max-width: 1500px;
 }
 
@@ -581,123 +582,121 @@ section.md-col .Tags::before {
   }
 }
 
-section.md-col div.product_container {
-  position: relative;
-  margin: 0 auto;
-  padding-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+section.md-col .re {
+  text-align: right;
+  margin: 0 20px;
 }
 
-@media screen and (max-width: 1200px) {
-  section.md-col div.product_container {
-    margin: 0;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+section.md-col .re a {
+  color: #157dd3;
+  text-decoration: none;
+}
+
+section.md-col .re a:hover {
+  color: #5a6596;
+}
+
+@media screen and (max-width: 500px) {
+  section.md-col .re {
+    text-align: center;
+    margin: 20px auto 0;
+    border: 1px solid #cfcece;
+    padding: 10px;
+    width: 250px;
   }
 }
 
+section.md-col .product_container {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 @media screen and (max-width: 750px) {
-  section.md-col div.product_container {
+  section.md-col .product_container {
     padding: 0;
   }
 }
 
-section.md-col div.product_container span.contents {
-  margin: 150px 0;
+section.md-col .product_container .contents {
+  position: relative;
+  margin: 12px 0 7px;
   display: inline-block;
   position: relative;
 }
 
 @media screen and (max-width: 1200px) {
-  section.md-col div.product_container span.contents {
-    margin: 130px 0;
+  section.md-col .product_container .contents {
+    margin: 130px auto;
   }
 }
 
 @media screen and (max-width: 750px) {
-  section.md-col div.product_container span.contents {
-    margin: 100px auto;
+  section.md-col .product_container .contents {
+    margin: 20px auto;
   }
 }
 
-section.md-col div.product_container span.contents .products {
-  width: 330px;
-  height: 300px;
-  margin: 0 10px;
-  position: relative;
-}
-
-@media screen and (max-width: 1200px) {
-  section.md-col div.product_container span.contents .products {
-    width: 300px;
-  }
+section.md-col .product_container .contents .products {
+  width: 270px;
+  margin: 0 5px;
+  height: 250px;
 }
 
 @media screen and (max-width: 750px) {
-  section.md-col div.product_container span.contents .products {
-    width: 500px;
+  section.md-col .product_container .contents .products {
+    width: 250px;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  section.md-col div.product_container span.contents .products {
-    max-height: 300px;
+  section.md-col .product_container .contents .products {
     margin: 12px auto;
-    width: 300px;
+    width: 100%;
+    height: 50vh;
   }
 }
 
-section.md-col div.product_container span.contents .products img {
+section.md-col .product_container .contents .products::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+section.md-col .product_container .contents .products:hover::before {
+  background-color: rgba(141, 141, 141, 0.384);
+  opacity: .35;
+}
+
+section.md-col .product_container .contents img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
-section.md-col div.product_container span.contents .products div.txt {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 20px;
+section.md-col .product_container .contents .price {
+  margin: 5px 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: #2d2d2e;
+  text-transform: uppercase;
 }
 
-section.md-col div.product_container span.contents .products div.txt .overlay .btn-secondary {
-  background-color: #de3232;
-  border: 1px solid #de3232;
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-}
-
-section.md-col div.product_container span.contents .products div.txt .overlay .btn-secondary:hover, section.md-col div.product_container span.contents .products div.txt .overlay .btn-secondary:focus {
-  background-color: red;
-  outline: 0px !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-section.md-col div.product_container span.contents .products div.txt .product-tag {
-  margin: 12px 0 4px;
-}
-
-section.md-col div.product_container span.contents .products div.txt .product-tag .fa {
+section.md-col .product_container .contents .price .discount {
   font-size: 17px;
-  color: #ff9100;
-}
-
-section.md-col div.product_container span.contents .products div.txt .date {
-  font-size: 14px;
-  color: #8c8c8c;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: #b7b9bb;
 }
 
 section.ads {
@@ -1417,12 +1416,19 @@ section#services .card-container .cards .card .icon h4 {
 @media screen and (max-width: 1200px) {
   .reviewSection .content .reviews {
     margin: 20px 5px;
+    width: 270px;
   }
 }
 
 @media screen and (max-width: 750px) {
   .reviewSection .content .reviews {
-    margin: 20px 3px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reviewSection .content .reviews {
+    width: 350px;
   }
 }
 

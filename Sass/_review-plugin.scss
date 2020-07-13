@@ -22,9 +22,13 @@
   padding: 15px 15px;
   @include lgScreen{
     margin: 20px 5px;
+    width: 270px;
   }
   @include mediumScreen{
-    margin: 20px 3px;
+    margin: 20px auto;
+  
+  }@include smallScreen{
+    width: 350px;
   }
 
   .userId{
