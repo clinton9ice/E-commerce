@@ -16,20 +16,10 @@ nav {
   transition: 0.5s all ease;
   font-size: 22px;
   .site_logo {
-    letter-spacing: 4px;
-    font-weight: 400;
-    margin: 0 12px;
-    color: #fff;
-    text-decoration: none;
-    @include xsmallScreen {
-      font-size: 20px;
-      letter-spacing: 3px;
-    }
-    font-size: calc(22px * 100%);
-    @include mediumScreen {
-      font-size: 30px;
-      margin: 0 12px 0 0px;
-    }
+    overflow: hidden;
+  svg{
+    fill: white;
+  }
   }
 
   .list-container {
@@ -254,7 +244,9 @@ nav {
     border-bottom: none;
     box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
     .site_logo {
-      color: #000;
+     svg{
+      fill: #000;
+     }
     }
     .headerBars span,
     .headerBars span:before,

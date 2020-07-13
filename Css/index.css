@@ -193,26 +193,11 @@ nav {
 }
 
 nav .site_logo {
-  letter-spacing: 4px;
-  font-weight: 400;
-  margin: 0 12px;
-  color: #fff;
-  text-decoration: none;
-  font-size: calc(22px * 100%);
+  overflow: hidden;
 }
 
-@media screen and (max-width: 500px) {
-  nav .site_logo {
-    font-size: 20px;
-    letter-spacing: 3px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  nav .site_logo {
-    font-size: 30px;
-    margin: 0 12px 0 0px;
-  }
+nav .site_logo svg {
+  fill: white;
 }
 
 nav .list-container {
@@ -494,8 +479,8 @@ nav.active {
           box-shadow: 0 3px 15px 0 rgba(209, 206, 206, 0.226);
 }
 
-nav.active .site_logo {
-  color: #000;
+nav.active .site_logo svg {
+  fill: #000;
 }
 
 nav.active .headerBars span,
