@@ -16,10 +16,12 @@ section{
       line-height: 30px;
       margin: 0px 0px 0 20px;
       display: flex;
+      @include smallScreen{
+        text-align: center;
+      }
       @include xsmallScreen{
         width: 90%;
-        text-align: center;
-              }
+      }
       h2{
         font-size: 24px; 
     }
@@ -37,7 +39,7 @@ section{
       @include mediumScreen{
           border-right:30px solid transparent ;
       }
-      @include xsmallScreen{
+  @include xsmallScreen{
 display: none;
       }
   }
@@ -108,6 +110,11 @@ display: none;
        background-color: rgba(141, 141, 141, 0.384);
       opacity: .35;
         }
+      }
+    }
+    @include smallScreen{
+      &::before{
+        cursor: default;
       }
     }
 img{
